@@ -41,6 +41,8 @@ namespace SE1426_Group2_Lab3
             this.musicStoreDataSet = new SE1426_Group2_Lab3.MusicStoreDataSet();
             this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSetTableAdapters.AlbumsTableAdapter();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.albumsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
@@ -53,6 +55,8 @@ namespace SE1426_Group2_Lab3
             this.storeToolStripMenuItem,
             this.cartToolStripMenuItem,
             this.loginToolStripMenuItem,
+            this.reportToolStripMenuItem,
+            this.albumsToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
@@ -121,6 +125,20 @@ namespace SE1426_Group2_Lab3
             // 
             this.albumsTableAdapter.ClearBeforeFill = true;
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportToolStripMenuItem.Image")));
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(118, 54);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // albumsToolStripMenuItem
+            // 
+            this.albumsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("albumsToolStripMenuItem.Image")));
+            this.albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
+            this.albumsToolStripMenuItem.Size = new System.Drawing.Size(123, 54);
+            this.albumsToolStripMenuItem.Text = "Albums";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -154,6 +172,8 @@ namespace SE1426_Group2_Lab3
         private MusicStoreDataSet musicStoreDataSet;
         private System.Windows.Forms.BindingSource albumsBindingSource;
         private MusicStoreDataSetTableAdapters.AlbumsTableAdapter albumsTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem albumsToolStripMenuItem;
     }
 }
 
