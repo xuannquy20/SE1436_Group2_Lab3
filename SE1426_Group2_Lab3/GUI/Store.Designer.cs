@@ -33,6 +33,7 @@ namespace SE1426_Group2_Lab3.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Store));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.musicStoreDataSet1 = new SE1426_Group2_Lab3.MusicStoreDataSet1();
             this.genresTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet1TableAdapters.GenresTableAdapter();
@@ -82,6 +83,15 @@ namespace SE1426_Group2_Lab3.GUI
             this.C1.Name = "C1";
             this.C1.ReadOnly = true;
             this.C1.Width = 323;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
             // 
             // genresBindingSource
             // 

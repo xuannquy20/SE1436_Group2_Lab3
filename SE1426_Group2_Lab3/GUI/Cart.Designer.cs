@@ -140,7 +140,9 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckout);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Cart";
+            this.ShowInTaskbar = false;
             this.Text = "Cart";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
