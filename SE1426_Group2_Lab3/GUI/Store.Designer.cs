@@ -40,7 +40,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.musicStoreDataSet2 = new SE1426_Group2_Lab3.MusicStoreDataSet2();
             this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet2TableAdapters.AlbumsTableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AlbumsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,12 +61,9 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.C1,
-            this.nameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.genresBindingSource;
+            this.C1});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -125,15 +121,6 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.albumsTableAdapter.ClearBeforeFill = true;
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
@@ -152,6 +139,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView3.Size = new System.Drawing.Size(944, 198);
             this.dataGridView3.TabIndex = 4;
             // 
@@ -170,6 +158,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.AlbumsID.MinimumWidth = 6;
             this.AlbumsID.Name = "AlbumsID";
             this.AlbumsID.ReadOnly = true;
+            this.AlbumsID.Width = 125;
             // 
             // GenresID
             // 
@@ -178,6 +167,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.GenresID.Name = "GenresID";
             this.GenresID.ReadOnly = true;
             this.GenresID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.GenresID.Width = 125;
             // 
             // ArtistID
             // 
@@ -186,6 +176,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.ArtistID.Name = "ArtistID";
             this.ArtistID.ReadOnly = true;
             this.ArtistID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ArtistID.Width = 125;
             // 
             // Title
             // 
@@ -194,6 +185,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Title.Name = "Title";
             this.Title.ReadOnly = true;
             this.Title.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Title.Width = 125;
             // 
             // Price
             // 
@@ -202,6 +194,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             this.Price.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Price.Width = 125;
             // 
             // AlbumUrl
             // 
@@ -210,6 +203,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.AlbumUrl.Name = "AlbumUrl";
             this.AlbumUrl.ReadOnly = true;
             this.AlbumUrl.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.AlbumUrl.Width = 125;
             // 
             // Store
             // 
@@ -248,7 +242,6 @@ namespace SE1426_Group2_Lab3.GUI
         private MusicStoreDataSet2 musicStoreDataSet2;
         private System.Windows.Forms.BindingSource albumsBindingSource;
         private MusicStoreDataSet2TableAdapters.AlbumsTableAdapter albumsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewButtonColumn Detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn AlbumsID;
