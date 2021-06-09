@@ -74,6 +74,7 @@ namespace SE1426_Group2_Lab3
             this.cartToolStripMenuItem.Name = "cartToolStripMenuItem";
             this.cartToolStripMenuItem.Size = new System.Drawing.Size(100, 54);
             this.cartToolStripMenuItem.Text = "Cart";
+            this.cartToolStripMenuItem.Click += new System.EventHandler(this.cartToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 

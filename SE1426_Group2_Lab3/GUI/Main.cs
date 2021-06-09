@@ -29,6 +29,19 @@ namespace SE1426_Group2_Lab3
             p.Show();
         }
 
+        public bool checkOpened(string formname)
+        {
+            FormCollection f = Application.OpenForms;
+            foreach(Form f1 in f)
+            {
+                if (f1.Name == formname)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
         private void screen_Paint(object sender, PaintEventArgs e)
         {
@@ -54,6 +67,14 @@ namespace SE1426_Group2_Lab3
         private void storeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Embed(screen, new Store());
+        }
+
+        private void cartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cart c = new Cart();
+            if (!checkOpened(c.Name)) { 
+                c.Show();
+            }
         }
     }
 }
