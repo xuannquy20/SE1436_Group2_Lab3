@@ -35,14 +35,14 @@ namespace SE1426_Group2_Lab3
             this.storeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.albumsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.screen = new System.Windows.Forms.Panel();
             this.musicStoreDataSet = new SE1426_Group2_Lab3.MusicStoreDataSet();
             this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSetTableAdapters.AlbumsTableAdapter();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.albumsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
@@ -87,6 +87,20 @@ namespace SE1426_Group2_Lab3
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(110, 54);
             this.loginToolStripMenuItem.Text = "Login";
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportToolStripMenuItem.Image")));
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(118, 54);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // albumsToolStripMenuItem
+            // 
+            this.albumsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("albumsToolStripMenuItem.Image")));
+            this.albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
+            this.albumsToolStripMenuItem.Size = new System.Drawing.Size(123, 54);
+            this.albumsToolStripMenuItem.Text = "Albums";
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
@@ -125,20 +139,6 @@ namespace SE1426_Group2_Lab3
             // 
             this.albumsTableAdapter.ClearBeforeFill = true;
             // 
-            // reportToolStripMenuItem
-            // 
-            this.reportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportToolStripMenuItem.Image")));
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(118, 54);
-            this.reportToolStripMenuItem.Text = "Report";
-            // 
-            // albumsToolStripMenuItem
-            // 
-            this.albumsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("albumsToolStripMenuItem.Image")));
-            this.albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
-            this.albumsToolStripMenuItem.Size = new System.Drawing.Size(123, 54);
-            this.albumsToolStripMenuItem.Text = "Albums";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -149,6 +149,7 @@ namespace SE1426_Group2_Lab3
             this.Controls.Add(this.Menu);
             this.MainMenuStrip = this.Menu;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Music store";
             this.Load += new System.EventHandler(this.Main_Load);
             this.Menu.ResumeLayout(false);
