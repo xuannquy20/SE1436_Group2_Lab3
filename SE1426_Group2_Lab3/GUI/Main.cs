@@ -16,6 +16,11 @@ namespace SE1426_Group2_Lab3
         public Main()
         {
             InitializeComponent();
+            if(loginToolStripMenuItem.Text == "Login")
+            {
+                reportToolStripMenuItem.Visible = false;
+                albumsToolStripMenuItem.Visible = false;
+            }
         }
 
         private void Embed(Panel p, Form f)
