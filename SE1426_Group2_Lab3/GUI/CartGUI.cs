@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SE1426_Group2_Lab3.GUI
 {
-    public partial class Cart : Form
+    public partial class CartGUI : Form
     {
-        public Cart()
+        public CartGUI()
         {
             InitializeComponent();
         }
@@ -19,6 +19,12 @@ namespace SE1426_Group2_Lab3.GUI
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            CheckOutGUI c = new CheckOutGUI();
+            c.ShowDialog();
         }
     }
 }

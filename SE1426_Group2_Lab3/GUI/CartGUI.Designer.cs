@@ -1,7 +1,7 @@
 ﻿
 namespace SE1426_Group2_Lab3.GUI
 {
-    partial class Cart
+    partial class CartGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -52,6 +52,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.btnCheckout.TabIndex = 0;
             this.btnCheckout.Text = "Checkout >>";
             this.btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // label1
             // 

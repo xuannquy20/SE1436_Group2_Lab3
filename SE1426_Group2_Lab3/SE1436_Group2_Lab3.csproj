@@ -55,29 +55,35 @@
     <Compile Include="DTL\Order.cs" />
     <Compile Include="DTL\OrderDerail.cs" />
     <Compile Include="DTL\User.cs" />
-    <Compile Include="GUI\AboutDetail.cs">
+    <Compile Include="GUI\AlbumDetailGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AboutDetail.Designer.cs">
-      <DependentUpon>AboutDetail.cs</DependentUpon>
+    <Compile Include="GUI\AlbumDetailGUI.Designer.cs">
+      <DependentUpon>AlbumDetailGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Cart.cs">
+    <Compile Include="GUI\CartGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Cart.Designer.cs">
-      <DependentUpon>Cart.cs</DependentUpon>
+    <Compile Include="GUI\CartGUI.Designer.cs">
+      <DependentUpon>CartGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Main.cs">
+    <Compile Include="GUI\CheckOutGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="GUI\CheckOutGUI.Designer.cs">
+      <DependentUpon>CheckOutGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Store.cs">
+    <Compile Include="GUI\MainGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Store.Designer.cs">
-      <DependentUpon>Store.cs</DependentUpon>
+    <Compile Include="GUI\MainGUI.Designer.cs">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\StoreGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StoreGUI.Designer.cs">
+      <DependentUpon>StoreGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MusicStoreDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -96,17 +102,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\AboutDetail.resx">
-      <DependentUpon>AboutDetail.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\AlbumDetailGUI.resx">
+      <DependentUpon>AlbumDetailGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Cart.resx">
-      <DependentUpon>Cart.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CartGUI.resx">
+      <DependentUpon>CartGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CheckOutGUI.resx">
+      <DependentUpon>CheckOutGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Store.resx">
-      <DependentUpon>Store.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\MainGUI.resx">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StoreGUI.resx">
+      <DependentUpon>StoreGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

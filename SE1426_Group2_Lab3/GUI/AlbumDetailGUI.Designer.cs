@@ -1,7 +1,7 @@
 ﻿
 namespace SE1426_Group2_Lab3.GUI
 {
-    partial class AboutDetail
+    partial class AlbumDetailGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SE1426_Group2_Lab3.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutDetail));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlbumDetailGUI));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -96,6 +96,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(325, 22);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -138,7 +139,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // AboutDetail
+            // AboutDetailGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +158,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "AboutDetail";
+            this.Name = "AboutDetailGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutDetail";
             this.Load += new System.EventHandler(this.AboutDetail_Load);

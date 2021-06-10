@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SE1426_Group2_Lab3.GUI
 {
-    public partial class AboutDetail : Form
+    public partial class AlbumDetailGUI : Form
     {
-        public AboutDetail()
+        public AlbumDetailGUI()
         {
             InitializeComponent();
         }
@@ -23,7 +23,12 @@ namespace SE1426_Group2_Lab3.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            new Cart().ShowDialog();
+            new CartGUI().ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -57,12 +57,12 @@ namespace SE1426_Group2_Lab3
 
         private void storeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Embed(screen, new Store());
+            Embed(screen, new StoreGUI());
         }
 
         private void cartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Cart().ShowDialog();
+            new CartGUI().ShowDialog();
         }
     }
 }
