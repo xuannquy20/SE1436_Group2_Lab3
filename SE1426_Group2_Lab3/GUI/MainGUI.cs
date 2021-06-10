@@ -71,5 +71,10 @@ namespace SE1426_Group2_Lab3
                 new LoginGUI().ShowDialog();
             }
         }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Embed(screen, new ReportGUI());
+        }
     }
 }

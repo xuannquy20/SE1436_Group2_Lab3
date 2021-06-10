@@ -86,6 +86,12 @@
     <Compile Include="GUI\MainGUI.Designer.cs">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ReportGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportGUI.Designer.cs">
+      <DependentUpon>ReportGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\StoreGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportGUI.resx">
+      <DependentUpon>ReportGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\StoreGUI.resx">
       <DependentUpon>StoreGUI.cs</DependentUpon>
