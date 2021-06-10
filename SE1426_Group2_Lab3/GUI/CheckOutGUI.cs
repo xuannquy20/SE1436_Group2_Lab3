@@ -14,6 +14,8 @@ namespace SE1426_Group2_Lab3.GUI
         public CheckOutGUI()
         {
             InitializeComponent();
+            DateTime date = DateTime.Now;
+            dateTimePicker1.Value = date;
         }
 
         private void label2_Click(object sender, EventArgs e)

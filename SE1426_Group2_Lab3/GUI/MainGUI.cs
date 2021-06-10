@@ -1,4 +1,5 @@
 
+using Lab3_Template.DTL;
 using SE1426_Group2_Lab3.GUI;
 using System;
 using System.Collections.Generic;
@@ -13,14 +14,12 @@ namespace SE1426_Group2_Lab3
 {
     public partial class Main : Form
     {
+
         public Main()
         {
             InitializeComponent();
-            if(loginToolStripMenuItem.Text == "Login")
-            {
-                reportToolStripMenuItem.Visible = false;
-                albumsToolStripMenuItem.Visible = false;
-            }
+            reportToolStripMenuItem.Visible = false;
+            albumsToolStripMenuItem.Visible = false;
         }
 
         private void Embed(Panel p, Form f)
@@ -63,6 +62,14 @@ namespace SE1426_Group2_Lab3
         private void cartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new CartGUI().ShowDialog();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(new User().UserName == null)
+            {
+                new LoginGUI().ShowDialog();
+            }
         }
     }
 }

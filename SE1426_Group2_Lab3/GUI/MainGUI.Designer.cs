@@ -86,6 +86,7 @@ namespace SE1426_Group2_Lab3
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(110, 54);
             this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
@@ -166,15 +167,15 @@ namespace SE1426_Group2_Lab3
         private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem storeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Panel screen;
         private MusicStoreDataSet musicStoreDataSet;
         private System.Windows.Forms.BindingSource albumsBindingSource;
         private MusicStoreDataSetTableAdapters.AlbumsTableAdapter albumsTableAdapter;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem albumsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        public System.Windows.Forms.Panel screen;
+        public System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem albumsToolStripMenuItem;
     }
 }
 

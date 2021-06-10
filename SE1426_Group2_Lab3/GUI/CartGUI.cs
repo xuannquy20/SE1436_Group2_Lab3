@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab3_Template.DTL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,13 +19,17 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            CheckOutGUI c = new CheckOutGUI();
-            c.ShowDialog();
+            if(new Main().loginToolStripMenuItem.Text != "Login") { 
+                new CheckOutGUI().ShowDialog();
+            }
+            else
+            {
+                new LoginGUI().ShowDialog();
+            }
         }
     }
 }

@@ -317,6 +317,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dateTimePicker1.Location = new System.Drawing.Point(258, 40);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -324,7 +325,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.dateTimePicker1.TabIndex = 27;
             this.dateTimePicker1.Value = new System.DateTime(2021, 6, 10, 21, 11, 22, 0);
             // 
-            // CheckOut
+            // CheckOutGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -359,7 +360,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "CheckOut";
+            this.Name = "CheckOutGUI";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;

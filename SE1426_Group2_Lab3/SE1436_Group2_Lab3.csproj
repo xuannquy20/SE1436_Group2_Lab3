@@ -47,6 +47,7 @@
     <Compile Include="DAL\AlbumDAO.cs" />
     <Compile Include="DAL\CartDAO.cs" />
     <Compile Include="DAL\DAO.cs" />
+    <Compile Include="DAL\LoginDAO.cs" />
     <Compile Include="DAL\ShoppingCartDAO .cs" />
     <Compile Include="DTL\Album.cs" />
     <Compile Include="DTL\Artist.cs" />
@@ -72,6 +73,12 @@
     </Compile>
     <Compile Include="GUI\CheckOutGUI.Designer.cs">
       <DependentUpon>CheckOutGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginGUI.Designer.cs">
+      <DependentUpon>LoginGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainGUI.cs">
       <SubType>Form</SubType>
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CheckOutGUI.resx">
       <DependentUpon>CheckOutGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginGUI.resx">
+      <DependentUpon>LoginGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>

@@ -33,11 +33,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Detail = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.DateCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AlbumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,64 +69,15 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Detail,
-            this.DateCreated,
-            this.AlbumID,
-            this.Count,
-            this.Remove});
-            this.dataGridView1.Location = new System.Drawing.Point(26, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 116);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(700, 193);
             this.dataGridView1.TabIndex = 3;
             // 
-            // Detail
-            // 
-            this.Detail.HeaderText = "Detail";
-            this.Detail.MinimumWidth = 6;
-            this.Detail.Name = "Detail";
-            this.Detail.ReadOnly = true;
-            this.Detail.Width = 125;
-            // 
-            // DateCreated
-            // 
-            this.DateCreated.HeaderText = "DateCreated";
-            this.DateCreated.MinimumWidth = 6;
-            this.DateCreated.Name = "DateCreated";
-            this.DateCreated.ReadOnly = true;
-            this.DateCreated.Width = 125;
-            // 
-            // AlbumID
-            // 
-            this.AlbumID.HeaderText = "AlbumID";
-            this.AlbumID.MinimumWidth = 6;
-            this.AlbumID.Name = "AlbumID";
-            this.AlbumID.ReadOnly = true;
-            this.AlbumID.Width = 125;
-            // 
-            // Count
-            // 
-            this.Count.HeaderText = "Count";
-            this.Count.MinimumWidth = 6;
-            this.Count.Name = "Count";
-            this.Count.ReadOnly = true;
-            this.Count.Width = 125;
-            // 
-            // Remove
-            // 
-            this.Remove.HeaderText = "Remove";
-            this.Remove.MinimumWidth = 6;
-            this.Remove.Name = "Remove";
-            this.Remove.ReadOnly = true;
-            this.Remove.Width = 125;
-            // 
-            // Cart
+            // CartGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +88,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Cart";
+            this.Name = "CartGUI";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
@@ -158,10 +104,5 @@ namespace SE1426_Group2_Lab3.GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn Detail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateCreated;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AlbumID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
-        private System.Windows.Forms.DataGridViewButtonColumn Remove;
     }
 }
