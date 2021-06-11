@@ -31,20 +31,17 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string user = txtUserName.Text;
-            string pass = txtPass.Text;
-            LoginDAO.getLogin(user, pass);
-            if (Variable.Username == null)
-            {
-                MessageBox.Show("Tai khoan hoac mat khau sai");
-            }
-            else
-            {
-                MainGUI m = new MainGUI();
-                m.getLogin();
-                this.Close();
-            }
-            
+                string user = txtUserName.Text;
+                string pass = txtPass.Text;
+                LoginDAO.getLogin(user, pass);
+                if (Variable.Username == null)
+                {
+                    MessageBox.Show("Tai khoan hoac mat khau sai");
+                }
+                else
+                {
+                    this.Close();
+                }
         }
     }
 }

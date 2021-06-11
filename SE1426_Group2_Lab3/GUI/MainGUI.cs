@@ -19,8 +19,6 @@ namespace SE1426_Group2_Lab3
         public MainGUI()
         {
             InitializeComponent();
-            reportToolStripMenuItem.Visible = false;
-            albumsToolStripMenuItem.Visible = false;
         }
 
         private void Embed(Panel p, Form f)
@@ -43,6 +41,12 @@ namespace SE1426_Group2_Lab3
                     albumsToolStripMenuItem.Visible = true;
                 }
                 loginToolStripMenuItem.Text = "Logout (" + Variable.Username + ")";
+            }
+            else if (Variable.Username == null)
+            {
+                reportToolStripMenuItem.Visible = false;
+                albumsToolStripMenuItem.Visible = false;
+                loginToolStripMenuItem.Text = "Login";
             }
         }
 
@@ -79,9 +83,15 @@ namespace SE1426_Group2_Lab3
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(new User().UserName == null)
+            if(Variable.Username == null)
             {
                 new LoginGUI().ShowDialog();
+            }
+            else
+            {
+                Variable.Username = null;
+                Variable.Role = -1;
+                getLogin();
             }
         }
 
