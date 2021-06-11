@@ -66,7 +66,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(127, 22);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "113";
             // 
             // dataGridView1
             // 
