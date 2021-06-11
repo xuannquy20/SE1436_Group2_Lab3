@@ -32,8 +32,8 @@ namespace SE1426_Group2_Lab3.GUI
             this.btnCheckout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Cart = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Cart)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCheckout
@@ -67,15 +67,15 @@ namespace SE1426_Group2_Lab3.GUI
             this.textBox1.Size = new System.Drawing.Size(127, 22);
             this.textBox1.TabIndex = 2;
             // 
-            // dataGridView1
+            // Cart
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 193);
-            this.dataGridView1.TabIndex = 3;
+            this.Cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Cart.Location = new System.Drawing.Point(26, 116);
+            this.Cart.Name = "Cart";
+            this.Cart.RowHeadersWidth = 51;
+            this.Cart.RowTemplate.Height = 24;
+            this.Cart.Size = new System.Drawing.Size(700, 193);
+            this.Cart.TabIndex = 3;
             // 
             // CartGUI
             // 
@@ -83,7 +83,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(748, 321);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Cart);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckout);
@@ -92,7 +92,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,6 +103,6 @@ namespace SE1426_Group2_Lab3.GUI
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Cart;
     }
 }

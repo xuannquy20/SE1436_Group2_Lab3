@@ -17,7 +17,7 @@ namespace SE1426_Group2_Lab3.GUI
         public AlbumDetailGUI()
         {
             InitializeComponent();
-            textBox5.Hide();
+            //textBox5.Hide();
         }
 
         private void AboutDetail_Load(object sender, EventArgs e)
@@ -38,10 +38,31 @@ namespace SE1426_Group2_Lab3.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            new CartGUI().ShowDialog();
+            
+            
+            try
+            {
+                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Carts]([CartId],[AlbumId],[Count],[DateCreated]) VALUES (@CartID, @AlbumID, @count, @Date)");
+                cmd.Parameters.AddWithValue("@CartID",Variable.Username);
+                cmd.Parameters.AddWithValue("@AlbumID", textBox5.Text);
+                cmd.Parameters.AddWithValue("@count", 1);
+                cmd.Parameters.AddWithValue("@Date", dt);
+                DAO.UpdateTable(cmd);
+                new CartGUI().ShowDialog();
+            }
+            catch(Exception ex)
+            {
+
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
