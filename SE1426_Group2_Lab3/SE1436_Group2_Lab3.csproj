@@ -56,11 +56,23 @@
     <Compile Include="DTL\Order.cs" />
     <Compile Include="DTL\OrderDerail.cs" />
     <Compile Include="DTL\User.cs" />
+    <Compile Include="GUI\AlbumAddGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AlbumAddGUI.Designer.cs">
+      <DependentUpon>AlbumAddGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AlbumDetailGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\AlbumDetailGUI.Designer.cs">
       <DependentUpon>AlbumDetailGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AlbumGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AlbumGUI.Designer.cs">
+      <DependentUpon>AlbumGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\CartGUI.cs">
       <SubType>Form</SubType>
@@ -115,8 +127,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AlbumAddGUI.resx">
+      <DependentUpon>AlbumAddGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AlbumDetailGUI.resx">
       <DependentUpon>AlbumDetailGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AlbumGUI.resx">
+      <DependentUpon>AlbumGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CartGUI.resx">
       <DependentUpon>CartGUI.cs</DependentUpon>
