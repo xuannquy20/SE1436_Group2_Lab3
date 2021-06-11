@@ -154,6 +154,7 @@ namespace SE1426_Group2_Lab3
             this.Name = "MainGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Music store";
+            this.Activated += new System.EventHandler(this.MainGUI_Activated);
             this.Load += new System.EventHandler(this.Main_Load);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();

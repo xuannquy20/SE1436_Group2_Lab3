@@ -31,23 +31,20 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User u = LoginDAO.getLogin(txtUserName.Text, txtPass.Text);
-            if (u == null)
+            string user = txtUserName.Text;
+            string pass = txtPass.Text;
+            LoginDAO.getLogin(user, pass);
+            if (Variable.Username == null)
             {
                 MessageBox.Show("Tai khoan hoac mat khau sai");
             }
             else
             {
                 MainGUI m = new MainGUI();
-                if(u.Role == 1)
-                {
-                    m.reportToolStripMenuItem.Visible = true;
-                    m.albumsToolStripMenuItem.Visible = true;
-                }
-                m.loginToolStripMenuItem.Text = "Logout (" + u.UserName + ")";
-                m.Show();
+                m.getLogin();
                 this.Close();
             }
+            
         }
     }
 }

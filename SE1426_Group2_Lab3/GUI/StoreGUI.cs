@@ -104,7 +104,8 @@ namespace SE1426_Group2_Lab3.GUI
             if (e.ColumnIndex == Albums.Columns["Detail"].Index)
             {
                 int albumID = (int)Albums.Rows[e.RowIndex].Cells["albumID"].Value;
-                new AlbumDetailGUI();
+                AlbumDetailGUI ab = new AlbumDetailGUI();
+                ab.showDetail(albumID);
             }
         }
     }

@@ -94,6 +94,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.textBox1.Location = new System.Drawing.Point(238, 151);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(325, 22);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -102,6 +103,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.textBox2.Location = new System.Drawing.Point(238, 198);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(122, 22);
             this.textBox2.TabIndex = 6;
             // 
@@ -109,6 +111,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.textBox3.Location = new System.Drawing.Point(238, 245);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(325, 22);
             this.textBox3.TabIndex = 7;
             // 
@@ -116,6 +119,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.textBox4.Location = new System.Drawing.Point(238, 300);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(325, 22);
             this.textBox4.TabIndex = 8;
             // 
@@ -139,7 +143,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // AboutDetailGUI
+            // AlbumDetailGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +162,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "AboutDetailGUI";
+            this.Name = "AlbumDetailGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutDetail";
             this.Load += new System.EventHandler(this.AboutDetail_Load);
