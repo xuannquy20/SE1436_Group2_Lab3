@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\AlbumDAO.cs" />
+    <Compile Include="DAL\ArtitsDAO.cs" />
     <Compile Include="DAL\CartDAO.cs" />
     <Compile Include="DAL\DAO.cs" />
+    <Compile Include="DAL\GenreDAO.cs" />
     <Compile Include="DAL\LoginDAO.cs" />
     <Compile Include="DAL\ShoppingCartDAO .cs" />
     <Compile Include="DTL\Album.cs" />
