@@ -50,13 +50,15 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if(new MainGUI().loginToolStripMenuItem.Text != "Login") { 
-                new CheckOutGUI().ShowDialog();
-            }
-            else
-            {
+            if(Variable.Username == null) {
                 new LoginGUI().ShowDialog();
             }
+            new CheckOutGUI().getCheckout(textBox1.Text);
+        }
+
+        private void CartGUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

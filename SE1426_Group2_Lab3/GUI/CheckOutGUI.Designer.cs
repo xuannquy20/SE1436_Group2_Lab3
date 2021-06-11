@@ -41,23 +41,23 @@ namespace SE1426_Group2_Lab3.GUI
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.firstname = new System.Windows.Forms.TextBox();
+            this.lastname = new System.Windows.Forms.TextBox();
+            this.address = new System.Windows.Forms.TextBox();
+            this.city = new System.Windows.Forms.TextBox();
+            this.state = new System.Windows.Forms.TextBox();
+            this.country = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.total = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.promocode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +79,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "User name:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -110,7 +109,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Address:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+
             // 
             // label6
             // 
@@ -121,7 +120,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.label6.Size = new System.Drawing.Size(43, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "City:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+
             // 
             // label7
             // 
@@ -142,7 +141,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.label8.Size = new System.Drawing.Size(72, 20);
             this.label8.TabIndex = 8;
             this.label8.Text = "Country:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+
             // 
             // label9
             // 
@@ -164,86 +163,86 @@ namespace SE1426_Group2_Lab3.GUI
             this.label10.TabIndex = 10;
             this.label10.Text = "Email:";
             // 
-            // textBox1
+            // username
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(258, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(281, 26);
-            this.textBox1.TabIndex = 11;
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.username.Location = new System.Drawing.Point(258, 86);
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            this.username.Size = new System.Drawing.Size(281, 26);
+            this.username.TabIndex = 11;
             // 
-            // textBox2
+            // firstname
             // 
-            this.textBox2.AcceptsReturn = true;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(258, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 26);
-            this.textBox2.TabIndex = 12;
+            this.firstname.AcceptsReturn = true;
+            this.firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.firstname.Location = new System.Drawing.Point(258, 130);
+            this.firstname.Name = "firstname";
+            this.firstname.Size = new System.Drawing.Size(281, 26);
+            this.firstname.TabIndex = 12;
             // 
-            // textBox3
+            // lastname
             // 
-            this.textBox3.AcceptsReturn = true;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox3.Location = new System.Drawing.Point(258, 176);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(281, 26);
-            this.textBox3.TabIndex = 13;
+            this.lastname.AcceptsReturn = true;
+            this.lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lastname.Location = new System.Drawing.Point(258, 176);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(281, 26);
+            this.lastname.TabIndex = 13;
             // 
-            // textBox4
+            // address
             // 
-            this.textBox4.AcceptsReturn = true;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox4.Location = new System.Drawing.Point(258, 222);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(281, 26);
-            this.textBox4.TabIndex = 14;
+            this.address.AcceptsReturn = true;
+            this.address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.address.Location = new System.Drawing.Point(258, 222);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(281, 26);
+            this.address.TabIndex = 14;
             // 
-            // textBox5
+            // city
             // 
-            this.textBox5.AcceptsReturn = true;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox5.Location = new System.Drawing.Point(258, 272);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(281, 26);
-            this.textBox5.TabIndex = 15;
+            this.city.AcceptsReturn = true;
+            this.city.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.city.Location = new System.Drawing.Point(258, 272);
+            this.city.Name = "city";
+            this.city.Size = new System.Drawing.Size(281, 26);
+            this.city.TabIndex = 15;
             // 
-            // textBox6
+            // state
             // 
-            this.textBox6.AcceptsReturn = true;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox6.Location = new System.Drawing.Point(258, 317);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(281, 26);
-            this.textBox6.TabIndex = 16;
+            this.state.AcceptsReturn = true;
+            this.state.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.state.Location = new System.Drawing.Point(258, 317);
+            this.state.Name = "state";
+            this.state.Size = new System.Drawing.Size(281, 26);
+            this.state.TabIndex = 16;
             // 
-            // textBox7
+            // country
             // 
-            this.textBox7.AcceptsReturn = true;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox7.Location = new System.Drawing.Point(258, 360);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(281, 26);
-            this.textBox7.TabIndex = 17;
+            this.country.AcceptsReturn = true;
+            this.country.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.country.Location = new System.Drawing.Point(258, 360);
+            this.country.Name = "country";
+            this.country.Size = new System.Drawing.Size(281, 26);
+            this.country.TabIndex = 17;
             // 
-            // textBox8
+            // phone
             // 
-            this.textBox8.AcceptsReturn = true;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox8.Location = new System.Drawing.Point(258, 405);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(281, 26);
-            this.textBox8.TabIndex = 18;
+            this.phone.AcceptsReturn = true;
+            this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.phone.Location = new System.Drawing.Point(258, 405);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(281, 26);
+            this.phone.TabIndex = 18;
             // 
-            // textBox9
+            // email
             // 
-            this.textBox9.AcceptsReturn = true;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox9.Location = new System.Drawing.Point(258, 442);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(281, 26);
-            this.textBox9.TabIndex = 19;
+            this.email.AcceptsReturn = true;
+            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.email.Location = new System.Drawing.Point(258, 442);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(281, 26);
+            this.email.TabIndex = 19;
             // 
             // label11
             // 
@@ -255,14 +254,14 @@ namespace SE1426_Group2_Lab3.GUI
             this.label11.TabIndex = 20;
             this.label11.Text = "Total:";
             // 
-            // textBox10
+            // total
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox10.Location = new System.Drawing.Point(258, 489);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(281, 26);
-            this.textBox10.TabIndex = 21;
+            this.total.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.total.Location = new System.Drawing.Point(258, 489);
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Size = new System.Drawing.Size(281, 26);
+            this.total.TabIndex = 21;
             // 
             // label12
             // 
@@ -283,16 +282,16 @@ namespace SE1426_Group2_Lab3.GUI
             this.label13.Size = new System.Drawing.Size(99, 20);
             this.label13.TabIndex = 23;
             this.label13.Text = "Promocode:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+
             // 
-            // textBox11
+            // promocode
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox11.Location = new System.Drawing.Point(258, 603);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(281, 26);
-            this.textBox11.TabIndex = 24;
+            this.promocode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.promocode.Location = new System.Drawing.Point(258, 603);
+            this.promocode.Name = "promocode";
+            this.promocode.ReadOnly = true;
+            this.promocode.Size = new System.Drawing.Size(281, 26);
+            this.promocode.TabIndex = 24;
             // 
             // button1
             // 
@@ -303,6 +302,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.button1.TabIndex = 25;
             this.button1.Text = "Order";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -313,17 +313,17 @@ namespace SE1426_Group2_Lab3.GUI
             this.button2.TabIndex = 26;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+
             // 
-            // dateTimePicker1
+            // date
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(258, 40);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(281, 26);
-            this.dateTimePicker1.TabIndex = 27;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 6, 10, 21, 11, 22, 0);
+            this.date.Enabled = false;
+            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.date.Location = new System.Drawing.Point(258, 40);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(281, 26);
+            this.date.TabIndex = 27;
+            this.date.Value = new System.DateTime(2021, 6, 11, 0, 0, 0, 0);
             // 
             // CheckOutGUI
             // 
@@ -332,23 +332,23 @@ namespace SE1426_Group2_Lab3.GUI
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(741, 753);
             this.ControlBox = false;
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.promocode);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.total);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.phone);
+            this.Controls.Add(this.country);
+            this.Controls.Add(this.state);
+            this.Controls.Add(this.city);
+            this.Controls.Add(this.address);
+            this.Controls.Add(this.lastname);
+            this.Controls.Add(this.firstname);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -386,19 +386,19 @@ namespace SE1426_Group2_Lab3.GUI
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox textBox8;
-        public System.Windows.Forms.TextBox textBox9;
-        public System.Windows.Forms.TextBox textBox10;
-        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox username;
+        public System.Windows.Forms.TextBox firstname;
+        public System.Windows.Forms.TextBox lastname;
+        public System.Windows.Forms.TextBox address;
+        public System.Windows.Forms.TextBox city;
+        public System.Windows.Forms.TextBox state;
+        public System.Windows.Forms.TextBox country;
+        public System.Windows.Forms.TextBox phone;
+        public System.Windows.Forms.TextBox email;
+        public System.Windows.Forms.TextBox total;
+        public System.Windows.Forms.TextBox promocode;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker date;
     }
 }

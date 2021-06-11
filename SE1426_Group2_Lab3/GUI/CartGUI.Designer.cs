@@ -66,6 +66,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(127, 22);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "113";
             // 
             // Cart
             // 
@@ -92,7 +93,8 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
-            ((System.ComponentModel.ISupportInitialize)(this.Cart)).EndInit();
+            this.Load += new System.EventHandler(this.CartGUI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
