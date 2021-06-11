@@ -50,6 +50,7 @@
     <Compile Include="DAL\DAO.cs" />
     <Compile Include="DAL\GenreDAO.cs" />
     <Compile Include="DAL\LoginDAO.cs" />
+    <Compile Include="DAL\OrderDAO.cs" />
     <Compile Include="DAL\ShoppingCartDAO .cs" />
     <Compile Include="DTL\Album.cs" />
     <Compile Include="DTL\Artist.cs" />
