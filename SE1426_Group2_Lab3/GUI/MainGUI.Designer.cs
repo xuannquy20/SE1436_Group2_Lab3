@@ -1,7 +1,7 @@
 ﻿
 namespace SE1426_Group2_Lab3
 {
-    partial class Main
+    partial class MainGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace SE1426_Group2_Lab3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGUI));
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.storeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,6 +102,7 @@ namespace SE1426_Group2_Lab3
             this.albumsToolStripMenuItem.Name = "albumsToolStripMenuItem";
             this.albumsToolStripMenuItem.Size = new System.Drawing.Size(123, 54);
             this.albumsToolStripMenuItem.Text = "Albums";
+            this.albumsToolStripMenuItem.Click += new System.EventHandler(this.albumsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -141,7 +142,7 @@ namespace SE1426_Group2_Lab3
             // 
             this.albumsTableAdapter.ClearBeforeFill = true;
             // 
-            // Main
+            // MainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,7 +151,7 @@ namespace SE1426_Group2_Lab3
             this.Controls.Add(this.screen);
             this.Controls.Add(this.Menu);
             this.MainMenuStrip = this.Menu;
-            this.Name = "Main";
+            this.Name = "MainGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Music store";
             this.Load += new System.EventHandler(this.Main_Load);

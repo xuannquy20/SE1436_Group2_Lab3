@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace SE1426_Group2_Lab3
 {
-    public partial class Main : Form
+    public partial class MainGUI : Form
     {
 
-        public Main()
+        public MainGUI()
         {
             InitializeComponent();
             reportToolStripMenuItem.Visible = false;
@@ -75,6 +75,11 @@ namespace SE1426_Group2_Lab3
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Embed(screen, new ReportGUI());
+        }
+
+        private void albumsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

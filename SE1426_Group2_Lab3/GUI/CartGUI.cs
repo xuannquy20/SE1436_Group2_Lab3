@@ -23,7 +23,7 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if(new Main().loginToolStripMenuItem.Text != "Login") { 
+            if(new MainGUI().loginToolStripMenuItem.Text != "Login") { 
                 new CheckOutGUI().ShowDialog();
             }
             else

@@ -13,7 +13,6 @@ namespace SE1426_Group2_Lab3.GUI
 {
     public partial class LoginGUI : Form
     {
-        public bool checkLogin = false;
 
         public LoginGUI()
         {
@@ -32,7 +31,6 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!checkLogin) { 
             User u = LoginDAO.getLogin(txtUserName.Text, txtPass.Text);
             if (u == null)
             {
@@ -40,16 +38,15 @@ namespace SE1426_Group2_Lab3.GUI
             }
             else
             {
-                Main m = new Main();
+                MainGUI m = new MainGUI();
                 if(u.Role == 1)
                 {
                     m.reportToolStripMenuItem.Visible = true;
                     m.albumsToolStripMenuItem.Visible = true;
                 }
                 m.loginToolStripMenuItem.Text = "Logout (" + u.UserName + ")";
+                m.Show();
                 this.Close();
-                checkLogin = true;
-            }
             }
         }
     }

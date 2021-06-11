@@ -15,7 +15,7 @@ namespace SE1426_Group2_Lab3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new MainGUI());
         }
     }
 }

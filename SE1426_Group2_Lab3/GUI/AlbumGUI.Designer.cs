@@ -35,9 +35,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(16, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
+            this.button1.Size = new System.Drawing.Size(199, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create a new album";
             this.button1.UseVisualStyleBackColor = true;
@@ -46,18 +47,21 @@ namespace SE1426_Group2_Lab3.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Location = new System.Drawing.Point(12, 41);
+            this.panel1.Location = new System.Drawing.Point(16, 50);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(693, 310);
+            this.panel1.Size = new System.Drawing.Size(924, 382);
             this.panel1.TabIndex = 1;
             // 
             // AlbumGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 373);
+            this.ClientSize = new System.Drawing.Size(968, 459);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AlbumGUI";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
