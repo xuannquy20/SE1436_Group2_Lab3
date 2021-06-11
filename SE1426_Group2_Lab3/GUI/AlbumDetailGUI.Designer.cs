@@ -150,6 +150,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 11;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // AlbumDetailGUI
             // 
