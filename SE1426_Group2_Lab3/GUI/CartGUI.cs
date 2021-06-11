@@ -60,5 +60,10 @@ namespace SE1426_Group2_Lab3.GUI
         {
 
         }
+
+        private void CartGUI_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

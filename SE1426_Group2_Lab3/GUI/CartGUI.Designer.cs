@@ -94,7 +94,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.CartGUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
