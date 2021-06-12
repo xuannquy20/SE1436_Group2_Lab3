@@ -30,8 +30,8 @@ namespace SE1426_Group2_Lab3.GUI
         private void InitializeComponent()
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.OrderGridView1 = new System.Windows.Forms.DataGridView();
+            this.OrderDetailGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,11 +40,11 @@ namespace SE1426_Group2_Lab3.GUI
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.textFname = new System.Windows.Forms.TextBox();
+            this.textCountry = new System.Windows.Forms.TextBox();
+            this.btFilter = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDetailGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -56,25 +56,26 @@ namespace SE1426_Group2_Lab3.GUI
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
-            // dataGridView1
+            // OrderGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(335, 29);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(564, 235);
-            this.dataGridView1.TabIndex = 1;
+            this.OrderGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrderGridView1.Location = new System.Drawing.Point(335, 29);
+            this.OrderGridView1.Name = "OrderGridView1";
+            this.OrderGridView1.RowHeadersWidth = 51;
+            this.OrderGridView1.RowTemplate.Height = 24;
+            this.OrderGridView1.Size = new System.Drawing.Size(564, 235);
+            this.OrderGridView1.TabIndex = 1;
+            this.OrderGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Order_CellClick);
             // 
-            // dataGridView2
+            // OrderDetailGridView2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(335, 300);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(446, 150);
-            this.dataGridView2.TabIndex = 2;
+            this.OrderDetailGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrderDetailGridView2.Location = new System.Drawing.Point(335, 300);
+            this.OrderDetailGridView2.Name = "OrderDetailGridView2";
+            this.OrderDetailGridView2.RowHeadersWidth = 51;
+            this.OrderDetailGridView2.RowTemplate.Height = 24;
+            this.OrderDetailGridView2.Size = new System.Drawing.Size(446, 150);
+            this.OrderDetailGridView2.TabIndex = 2;
             // 
             // label1
             // 
@@ -148,37 +149,40 @@ namespace SE1426_Group2_Lab3.GUI
             this.textBox2.Size = new System.Drawing.Size(113, 22);
             this.textBox2.TabIndex = 10;
             // 
-            // textBox3
+            // textFname
             // 
-            this.textBox3.Location = new System.Drawing.Point(142, 314);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(113, 22);
-            this.textBox3.TabIndex = 11;
+            this.textFname.Location = new System.Drawing.Point(142, 314);
+            this.textFname.Name = "textFname";
+            this.textFname.Size = new System.Drawing.Size(113, 22);
+            this.textFname.TabIndex = 11;
+            this.textFname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textFname_KeyPress);
             // 
-            // textBox4
+            // textCountry
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 350);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 22);
-            this.textBox4.TabIndex = 12;
+            this.textCountry.Location = new System.Drawing.Point(142, 350);
+            this.textCountry.Name = "textCountry";
+            this.textCountry.Size = new System.Drawing.Size(113, 22);
+            this.textCountry.TabIndex = 12;
+            this.textCountry.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCountry_KeyPress);
             // 
-            // button1
+            // btFilter
             // 
-            this.button1.Location = new System.Drawing.Point(142, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Filter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btFilter.Location = new System.Drawing.Point(142, 394);
+            this.btFilter.Name = "btFilter";
+            this.btFilter.Size = new System.Drawing.Size(75, 23);
+            this.btFilter.TabIndex = 13;
+            this.btFilter.Text = "Filter";
+            this.btFilter.UseVisualStyleBackColor = true;
+            this.btFilter.Click += new System.EventHandler(this.button1_Click);
             // 
             // ReportGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 472);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btFilter);
+            this.Controls.Add(this.textCountry);
+            this.Controls.Add(this.textFname);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
@@ -187,16 +191,16 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.OrderDetailGridView2);
+            this.Controls.Add(this.OrderGridView1);
             this.Controls.Add(this.monthCalendar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReportGUI";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "ReportGUI";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDetailGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,8 +209,8 @@ namespace SE1426_Group2_Lab3.GUI
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView OrderGridView1;
+        private System.Windows.Forms.DataGridView OrderDetailGridView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -215,8 +219,8 @@ namespace SE1426_Group2_Lab3.GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textFname;
+        private System.Windows.Forms.TextBox textCountry;
+        private System.Windows.Forms.Button btFilter;
     }
 }
