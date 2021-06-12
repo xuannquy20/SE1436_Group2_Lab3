@@ -31,7 +31,7 @@ namespace SE1426_Group2_Lab3.GUI
         {
             this.btnCheckout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.CartTable = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.CartTable)).BeginInit();
             this.SuspendLayout();
@@ -59,12 +59,12 @@ namespace SE1426_Group2_Lab3.GUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Total:";
             // 
-            // textBox1
+            // TotalTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(599, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 22);
-            this.textBox1.TabIndex = 2;
+            this.TotalTextBox.Location = new System.Drawing.Point(599, 53);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.Size = new System.Drawing.Size(127, 22);
+            this.TotalTextBox.TabIndex = 2;
             // 
             // CartTable
             // 
@@ -77,6 +77,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.CartTable.RowTemplate.Height = 24;
             this.CartTable.Size = new System.Drawing.Size(700, 193);
             this.CartTable.TabIndex = 3;
+            this.CartTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CartTable_CellClick);
             // 
             // CartGUI
             // 
@@ -85,7 +86,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(748, 321);
             this.Controls.Add(this.CartTable);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -105,7 +106,7 @@ namespace SE1426_Group2_Lab3.GUI
 
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.DataGridView CartTable;
     }
 }
