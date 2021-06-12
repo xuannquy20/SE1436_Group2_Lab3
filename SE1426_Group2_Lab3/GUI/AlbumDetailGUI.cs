@@ -43,16 +43,10 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            DateTime dt = DateTime.Now;
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Carts]([CartId],[AlbumId],[Count],[DateCreated]) VALUES (@CartID, @AlbumID, @count, @Date)");
-                cmd.Parameters.AddWithValue("@CartID",Variable.Username);
-                cmd.Parameters.AddWithValue("@AlbumID", textBox5.Text);
-                cmd.Parameters.AddWithValue("@count", 1);
-                cmd.Parameters.AddWithValue("@Date", dt);
-                DAO.UpdateTable(cmd);
+                ShoppingCartDAO s = ShoppingCartDAO.GetCart();
+                s.AddToCart(int.Parse(textBox5.Text));
                 CartGUI c = new CartGUI();
                 c.bind();
                 this.Close();

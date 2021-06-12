@@ -1,4 +1,5 @@
 ﻿using Lab3_Template.DTL;
+using SE1426_Group2_Lab3.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,6 +73,7 @@ namespace SE1426_Group2_Lab3.DAL
             // Return the OrderId as the confirmation number
             //return orderID;
         }*/
+
         public void AddToCart(int id)
         {
             // Get the matching cart and album instances
@@ -124,8 +126,8 @@ namespace SE1426_Group2_Lab3.DAL
         {
             if (cartID == null)
             {
-                if (UserName != null)
-                    cartID = UserName;
+                if (ShoppingCartId != null)
+                    cartID = ShoppingCartId;
                 else
                 {
                     Guid tempCartId = Guid.NewGuid();

@@ -43,10 +43,7 @@ namespace SE1426_Group2_Lab3.GUI
             catch (Exception ex)
             {
             }
-
-            
-
-            
+            if (Variable.Username != null) { 
             SqlCommand sql = new SqlCommand("select Sum((a.Price * c.count))  as total" +
                         " from Albums a join Carts c" +
                         " on c.AlbumId = a.AlbumId " +
@@ -59,7 +56,7 @@ namespace SE1426_Group2_Lab3.GUI
                 string  total = dtr["total"].ToString();
                 TotalTextBox.Text = total;
             }
-            
+            }
         }
         public void Remove_Click()
         {
@@ -98,6 +95,7 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void CartTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            ShoppingCartDAO s = new ShoppingCartDAO();
             if (e.ColumnIndex == CartTable.Columns["Detail"].Index)
             {
                 int albumID = (int)CartTable.Rows[e.RowIndex].Cells["albumID"].Value;
@@ -108,7 +106,7 @@ namespace SE1426_Group2_Lab3.GUI
             {
                 int albumID = (int)CartTable.Rows[e.RowIndex].Cells["albumID"].Value;
                 string CartID = Variable.Username;
-                CartDAO.Delete(CartID, albumID);
+                s.RemoveFromCart(albumID);
                 bind();
             }
         }

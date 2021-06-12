@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -78,6 +79,8 @@ namespace SE1426_Group2_Lab3
 
         private void cartToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string cmd = "select * from Carts";
+            new CartGUI().CartTable.DataSource = DAO.GetDataTable(cmd);
             new CartGUI().ShowDialog();
         }
 

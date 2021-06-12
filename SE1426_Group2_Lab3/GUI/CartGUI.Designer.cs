@@ -107,6 +107,6 @@ namespace SE1426_Group2_Lab3.GUI
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TotalTextBox;
-        private System.Windows.Forms.DataGridView CartTable;
+        public System.Windows.Forms.DataGridView CartTable;
     }
 }
