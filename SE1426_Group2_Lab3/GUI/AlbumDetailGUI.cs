@@ -17,7 +17,7 @@ namespace SE1426_Group2_Lab3.GUI
         public AlbumDetailGUI()
         {
             InitializeComponent();
-            //textBox5.Hide();
+            textBox5.Hide();
         }
 
         private void AboutDetail_Load(object sender, EventArgs e)
