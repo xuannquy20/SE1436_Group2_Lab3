@@ -38,8 +38,6 @@ namespace SE1426_Group2_Lab3.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            
-            
             try
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Carts]([CartId],[AlbumId],[Count],[DateCreated]) VALUES (@CartID, @AlbumID, @count, @Date)");
@@ -48,11 +46,12 @@ namespace SE1426_Group2_Lab3.GUI
                 cmd.Parameters.AddWithValue("@count", 1);
                 cmd.Parameters.AddWithValue("@Date", dt);
                 DAO.UpdateTable(cmd);
-                new CartGUI().ShowDialog();
+                CartGUI c = new CartGUI();
+                c.bind();
+                c.ShowDialog();
             }
             catch(Exception ex)
             {
-
             }
 
         }

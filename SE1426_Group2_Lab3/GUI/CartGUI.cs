@@ -17,35 +17,40 @@ namespace SE1426_Group2_Lab3.GUI
         public CartGUI()
         {
             InitializeComponent();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        public void bind()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select * " +
+                            "from Carts where CartId = @CartID");
+                cmd.Parameters.AddWithValue("@CartID", Variable.Username);
+                CartTable.DataSource = DAO.GetDataTable(cmd);
+            }
+            catch (Exception ex)
+            {
+            }
+
             DataGridViewButtonColumn btnDetail = new DataGridViewButtonColumn
             {
                 Name = "Detail",
                 Text = "Detail",
                 UseColumnTextForButtonValue = true,
             };
-            Cart.Columns.Insert(0, btnDetail);
-            
-            try
-            {
-                SqlCommand cmd = new SqlCommand("select DateCreated , AlbumId , Count" +
-                            "from Carts where CartId = @CartID");
-                cmd.Parameters.AddWithValue("@CartID", Variable.Username);
-                Cart.DataSource = DAO.GetDataTable(cmd);
-            }catch(Exception ex)
-            {
+            CartTable.Columns.Insert(0, btnDetail);
 
-            }
             DataGridViewButtonColumn btnRemove = new DataGridViewButtonColumn
             {
                 Name = "Remove",
                 Text = "Remove from cart",
                 UseColumnTextForButtonValue = true,
             };
-            Cart.Columns.Insert(1, btnRemove);
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
+            CartTable.Columns.Insert(CartTable.ColumnCount, btnRemove);
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -64,6 +69,10 @@ namespace SE1426_Group2_Lab3.GUI
         private void CartGUI_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void CartGUI_Activated(object sender, EventArgs e)
+        {
         }
     }
 }
