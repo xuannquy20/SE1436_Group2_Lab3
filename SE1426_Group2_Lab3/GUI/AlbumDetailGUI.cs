@@ -24,19 +24,26 @@ namespace SE1426_Group2_Lab3.GUI
         {
         }
 
+
+
         public void showDetail(int albumID)
         {
             Album a = AlbumDAO.GetAlbumByID(albumID);
-            this.textBox1.Text = a.Title;
-            this.textBox2.Text = a.Price.ToString();
-            this.textBox3.Text = ArtitsDAO.getName(a.ArtistID);
-            this.textBox4.Text = GenreDAO.getName(a.GenreID);
-            this.textBox5.Text = a.AlbumID.ToString();
+            textBox1.Text = a.Title;
+            textBox2.Text = a.Price.ToString();
+            textBox3.Text = ArtitsDAO.getName(a.ArtistID);
+            textBox4.Text = GenreDAO.getName(a.GenreID);
+            textBox5.Text = a.AlbumID.ToString();
+            pictureBox1.Image = Image.FromFile(a.AlbumUrl);
             this.ShowDialog();
         }
 
+
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
+
             DateTime dt = DateTime.Now;
             try
             {

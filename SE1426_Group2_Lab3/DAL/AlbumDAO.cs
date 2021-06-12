@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SE1426_Group2_Lab3.DAL
 {
@@ -84,6 +86,18 @@ namespace SE1426_Group2_Lab3.DAL
 
         }
 
+
+        private static string getProjectPath()
+        {
+            string path = Application.StartupPath;
+            DirectoryInfo di = new DirectoryInfo(path);
+            for (int i = 0; i < 2; i++)
+            {
+                di = Directory.GetParent(di.FullName);
+            }
+            return di.FullName;
+        }
+
         public static Album GetAlbumByID(int id)
         {
             Album album = null;
@@ -95,6 +109,8 @@ namespace SE1426_Group2_Lab3.DAL
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
+                    string path = getProjectPath() + row["AlbumUrl"].ToString();
+                    path.Replace('/', '\\');
                     album = new Album
                     {
                         AlbumID = int.Parse(row["AlbumId"].ToString()),
@@ -102,23 +118,17 @@ namespace SE1426_Group2_Lab3.DAL
                         ArtistID = int.Parse(row["ArtistID"].ToString()),
                         GenreID = int.Parse(row["GenreID"].ToString()),
                         Price = double.Parse(row["Price"].ToString()),
-                        AlbumUrl = row["AlbumUrl"].ToString()
-
+                        AlbumUrl = path
                     };
-
                 }
-
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-
             return album;
         }
-
-
     }
-
-
 }
+
+
