@@ -27,7 +27,7 @@ namespace SE1426_Group2_Lab3.GUI
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select * " +
+                SqlCommand cmd = new SqlCommand("select DateCreated, AlbumId,Count " +
                             "from Carts where CartId = @CartID");
                 cmd.Parameters.AddWithValue("@CartID", Variable.Username);
                 CartTable.DataSource = DAO.GetDataTable(cmd);
