@@ -55,6 +55,7 @@ namespace SE1426_Group2_Lab3.GUI
                 DAO.UpdateTable(cmd);
                 CartGUI c = new CartGUI();
                 c.bind();
+                this.Close();
                 c.ShowDialog();
             }
             catch(Exception ex)

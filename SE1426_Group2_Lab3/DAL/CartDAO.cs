@@ -35,6 +35,7 @@ namespace SE1426_Group2_Lab3.DAL
             }
             return carts.AsEnumerable();
         }
+
         public static DataTable GetDataTable()
         {
             return DAO.GetDataTable("SELECT * FROM carts");
@@ -127,6 +128,4 @@ namespace SE1426_Group2_Lab3.DAL
             }
         }
     }
-
-
 }

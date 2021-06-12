@@ -30,7 +30,13 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OrderDAO.addOrder(date.Text, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, total.Text, promocode.Text);
+            date.Format = DateTimePickerFormat.Custom;
+            date.CustomFormat = "yyyy/MM/dd";
+            string dat = date.Text;
+            OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
+            OrderDAO.addOrderDetail();
+            CartDAO.Delete(Variable.Username);
+            this.Close();
         }
     }
 }

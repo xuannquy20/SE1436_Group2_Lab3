@@ -16,6 +16,7 @@ namespace SE1426_Group2_Lab3.GUI
             InitializeComponent();
         }
 
+
         private void AlbumGUI_Load(object sender, EventArgs e)
         {
 

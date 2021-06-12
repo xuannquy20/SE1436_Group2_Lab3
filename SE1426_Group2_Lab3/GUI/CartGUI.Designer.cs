@@ -63,12 +63,13 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.textBox1.Location = new System.Drawing.Point(599, 53);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(127, 22);
             this.textBox1.TabIndex = 2;
             // 
             // CartTable
             // 
+            this.CartTable.AllowUserToAddRows = false;
+            this.CartTable.AllowUserToDeleteRows = false;
             this.CartTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CartTable.Location = new System.Drawing.Point(26, 116);
             this.CartTable.Name = "CartTable";

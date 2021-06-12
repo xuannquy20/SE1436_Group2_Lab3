@@ -102,7 +102,7 @@ namespace SE1426_Group2_Lab3
 
         private void albumsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Embed(screen, new AlbumGUI());
         }
 
         private void MainGUI_Activated(object sender, EventArgs e)

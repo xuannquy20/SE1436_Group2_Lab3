@@ -27,8 +27,7 @@ namespace SE1426_Group2_Lab3.GUI
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("select DateCreated, AlbumId,Count " +
-                            "from Carts where CartId = @CartID");
+                SqlCommand cmd = new SqlCommand("select DateCreated, AlbumId, Count from Carts where CartId = @CartID");
                 cmd.Parameters.AddWithValue("@CartID", Variable.Username);
                 CartTable.DataSource = DAO.GetDataTable(cmd);
             }
@@ -55,9 +54,11 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if(Variable.Username == null) {
+            CheckOutGUI co = new CheckOutGUI();
+            if (Variable.Username == null) {
                 new LoginGUI().ShowDialog();
             }
+            this.Close();
             new CheckOutGUI().getCheckout(textBox1.Text);
         }
 

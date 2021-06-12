@@ -25,5 +25,15 @@ namespace SE1426_Group2_Lab3.GUI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog 
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

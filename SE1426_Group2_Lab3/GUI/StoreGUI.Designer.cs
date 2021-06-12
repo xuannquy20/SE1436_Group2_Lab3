@@ -89,6 +89,8 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             // NameGenres
             // 
+            this.NameGenres.AllowUserToAddRows = false;
+            this.NameGenres.AllowUserToDeleteRows = false;
             this.NameGenres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.NameGenres.Location = new System.Drawing.Point(12, 12);
             this.NameGenres.Name = "NameGenres";
@@ -102,6 +104,8 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             // Albums
             // 
+            this.Albums.AllowUserToAddRows = false;
+            this.Albums.AllowUserToDeleteRows = false;
             this.Albums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Albums.Location = new System.Drawing.Point(13, 254);
             this.Albums.Name = "Albums";
