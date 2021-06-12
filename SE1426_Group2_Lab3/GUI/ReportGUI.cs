@@ -29,13 +29,13 @@ namespace SE1426_Group2_Lab3.GUI
             int month = monthCalendar1.SelectionStart.Month;
             int day = monthCalendar1.SelectionStart.Day;
 
-            textBox1.Text = string.Format("{0}/{1}/{2}", day, month, year);
+            textFrom.Text = string.Format("{0}/{1}/{2}", day, month, year);
 
             int year1 = monthCalendar1.SelectionEnd.Year;
             int month1 = monthCalendar1.SelectionEnd.Month;
             int day1 = monthCalendar1.SelectionEnd.Day;
 
-            textBox2.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
+            textTo.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
 
         }
 

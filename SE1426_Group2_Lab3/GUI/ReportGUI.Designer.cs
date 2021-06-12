@@ -38,8 +38,8 @@ namespace SE1426_Group2_Lab3.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textFrom = new System.Windows.Forms.TextBox();
+            this.textTo = new System.Windows.Forms.TextBox();
             this.textFname = new System.Windows.Forms.TextBox();
             this.textCountry = new System.Windows.Forms.TextBox();
             this.btFilter = new System.Windows.Forms.Button();
@@ -133,21 +133,21 @@ namespace SE1426_Group2_Lab3.GUI
             this.label6.TabIndex = 8;
             this.label6.Text = "Order detail:";
             // 
-            // textBox1
+            // textFrom
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 242);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(113, 22);
-            this.textBox1.TabIndex = 9;
+            this.textFrom.Location = new System.Drawing.Point(142, 242);
+            this.textFrom.Name = "textFrom";
+            this.textFrom.ReadOnly = true;
+            this.textFrom.Size = new System.Drawing.Size(113, 22);
+            this.textFrom.TabIndex = 9;
             // 
-            // textBox2
+            // textTo
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 277);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(113, 22);
-            this.textBox2.TabIndex = 10;
+            this.textTo.Location = new System.Drawing.Point(142, 277);
+            this.textTo.Name = "textTo";
+            this.textTo.ReadOnly = true;
+            this.textTo.Size = new System.Drawing.Size(113, 22);
+            this.textTo.TabIndex = 10;
             // 
             // textFname
             // 
@@ -183,8 +183,8 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.btFilter);
             this.Controls.Add(this.textCountry);
             this.Controls.Add(this.textFname);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textTo);
+            this.Controls.Add(this.textFrom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -217,8 +217,8 @@ namespace SE1426_Group2_Lab3.GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textFrom;
+        private System.Windows.Forms.TextBox textTo;
         private System.Windows.Forms.TextBox textFname;
         private System.Windows.Forms.TextBox textCountry;
         private System.Windows.Forms.Button btFilter;
