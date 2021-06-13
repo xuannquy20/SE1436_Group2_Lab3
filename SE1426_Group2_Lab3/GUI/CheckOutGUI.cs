@@ -33,9 +33,37 @@ namespace SE1426_Group2_Lab3.GUI
             date.Format = DateTimePickerFormat.Custom;
             date.CustomFormat = "yyyy/MM/dd";
             string dat = date.Text;
-            if(firstname.TextLength == 0 || lastname.TextLength == 0 || address.TextLength == 0|| city.TextLength == 0 || state.TextLength ==0 || country.TextLength==0|| phone.TextLength==0|| email.TextLength == 0)
+            if(firstname.TextLength == 0)
             {
-                MessageBox.Show("Vui long nhap du thong tin");
+                MessageBox.Show("First Name required!");
+            }
+            else if (lastname.TextLength == 0)
+            {
+                MessageBox.Show("Last Name required!");
+            }
+            else if(address.TextLength == 0)
+            {
+                MessageBox.Show("Address required!");
+            }
+            else if (city.TextLength == 0)
+            {
+                MessageBox.Show("City required!");
+            }
+            else if(state.TextLength == 0)
+            {
+                MessageBox.Show("State required!");
+            }
+            else if (country.TextLength == 0)
+            {
+                MessageBox.Show("Country required!");
+            }
+            else if(phone.TextLength == 0)
+            {
+                MessageBox.Show("Phone required!");
+            }
+            else if (email.TextLength == 0)
+            {
+                MessageBox.Show("Email required!");
             }
             else {
                 double free = 0;

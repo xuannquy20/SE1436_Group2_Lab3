@@ -40,12 +40,12 @@ namespace SE1426_Group2_Lab3.GUI
         {
             try
             {
+                this.Close();
                 CartGUI c = new CartGUI();
                 ShoppingCartDAO s = ShoppingCartDAO.GetCart();
                 s.AddToCart(int.Parse(textBox5.Text));
                 c.bind();
                 c.ShowDialog();
-                this.Close();
             }
             catch(Exception ex)
             {
