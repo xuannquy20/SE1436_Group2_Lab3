@@ -41,11 +41,6 @@ namespace SE1426_Group2_Lab3.GUI
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Store_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'musicStoreDataSet2.Albums' table. You can move, or remove it, as needed.
@@ -53,31 +48,6 @@ namespace SE1426_Group2_Lab3.GUI
             // TODO: This line of code loads data into the 'musicStoreDataSet1.Genres' table. You can move, or remove it, as needed.
             this.genresTableAdapter.Fill(this.musicStoreDataSet1.Genres);
 
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void NameGenres_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void NameGenres_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -95,8 +65,6 @@ namespace SE1426_Group2_Lab3.GUI
             {
                 throw new Exception(ex.Message);
             }
-
-
         }
 
         private void Albums_CellClick(object sender, DataGridViewCellEventArgs e)

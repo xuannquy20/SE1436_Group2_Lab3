@@ -63,6 +63,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.TotalTextBox.Location = new System.Drawing.Point(599, 53);
             this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
             this.TotalTextBox.Size = new System.Drawing.Size(127, 22);
             this.TotalTextBox.TabIndex = 2;
             // 
