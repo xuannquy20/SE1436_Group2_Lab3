@@ -42,9 +42,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(139, 77);
+            this.label1.Location = new System.Drawing.Point(104, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Author:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -53,9 +54,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(228, 77);
+            this.label2.Location = new System.Drawing.Point(171, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 20);
+            this.label2.Size = new System.Drawing.Size(113, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Class: SE1436";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -64,9 +66,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(228, 113);
+            this.label3.Location = new System.Drawing.Point(171, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Group 2:";
             // 
@@ -74,9 +77,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(285, 151);
+            this.label4.Location = new System.Drawing.Point(214, 123);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(271, 20);
+            this.label4.Size = new System.Drawing.Size(238, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "1. HE141297 Nguyen Xuan Quy";
             // 
@@ -84,9 +88,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(285, 189);
+            this.label5.Location = new System.Drawing.Point(214, 154);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 20);
+            this.label5.Size = new System.Drawing.Size(190, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "2. HE141304 Do Gia Bao";
             // 
@@ -94,9 +99,10 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(285, 228);
+            this.label6.Location = new System.Drawing.Point(214, 185);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(244, 20);
+            this.label6.Size = new System.Drawing.Size(212, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "3. HE141309 Mai Tien Dung";
             // 
@@ -104,18 +110,19 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(285, 266);
+            this.label7.Location = new System.Drawing.Point(214, 216);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 20);
+            this.label7.Size = new System.Drawing.Size(210, 17);
             this.label7.TabIndex = 6;
-            this.label7.Text = "4.";
+            this.label7.Text = "4. HE141301 Le Viet Hoang";
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(968, 472);
+            this.ClientSize = new System.Drawing.Size(726, 384);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -124,6 +131,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "About";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
