@@ -59,6 +59,12 @@
     <Compile Include="DTL\Order.cs" />
     <Compile Include="DTL\OrderDerail.cs" />
     <Compile Include="DTL\User.cs" />
+    <Compile Include="GUI\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AlbumAddGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AlbumAddGUI.resx">
       <DependentUpon>AlbumAddGUI.cs</DependentUpon>
     </EmbeddedResource>

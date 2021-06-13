@@ -82,12 +82,18 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            CheckOutGUI co = new CheckOutGUI();
-            if (Variable.Username == null) {
-                new LoginGUI().ShowDialog();
+            if(CartTable.RowCount == 0)
+            {
+                MessageBox.Show("Gio hang trong");
             }
-            this.Close();
-            new CheckOutGUI().getCheckout(TotalTextBox.Text);
+            else { 
+                CheckOutGUI co = new CheckOutGUI();
+                if (Variable.Username == null) {
+                    new LoginGUI().ShowDialog();
+                }
+                this.Close();
+                new CheckOutGUI().getCheckout(TotalTextBox.Text);
+            }
         }
         
         private void CartGUI_Load(object sender, EventArgs e)

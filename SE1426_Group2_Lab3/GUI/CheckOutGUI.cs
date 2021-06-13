@@ -33,10 +33,16 @@ namespace SE1426_Group2_Lab3.GUI
             date.Format = DateTimePickerFormat.Custom;
             date.CustomFormat = "yyyy/MM/dd";
             string dat = date.Text;
-            OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
-            OrderDAO.addOrderDetail();
-            CartDAO.Delete(Variable.Username);
-            this.Close();
+            if(firstname.TextLength == 0 || lastname.TextLength == 0 || address.TextLength == 0|| city.TextLength == 0 || state.TextLength ==0 || country.TextLength==0|| phone.TextLength==0|| email.TextLength == 0)
+            {
+                MessageBox.Show("Vui long nhap du thong tin");
+            }
+            else { 
+                OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
+                OrderDAO.addOrderDetail();
+                CartDAO.Delete(Variable.Username);
+                this.Close();
+            }
         }
     }
 }

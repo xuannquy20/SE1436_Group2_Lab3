@@ -28,21 +28,6 @@ namespace SE1426_Group2_Lab3.DAL
             DAO.UpdateTable(cmd);
         }
 
-        public static int getId()
-        {
-            try { 
-                string cmd = "select Max(OrderId) as orderId from Orders";
-                DataTable dt = DAO.GetDataTable(cmd);
-                if (dt.Rows.Count > 0)
-                {
-                    DataRow row = dt.Rows[0];
-                    return int.Parse(row["orderId"].ToString());
-                }
-            }
-            catch (Exception e) { 
-            }
-            return -1;
-        }
 
         public static void addOrderDetail()
         {
