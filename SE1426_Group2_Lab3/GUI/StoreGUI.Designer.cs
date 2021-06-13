@@ -100,8 +100,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.NameGenres.Size = new System.Drawing.Size(242, 235);
             this.NameGenres.TabIndex = 5;
             this.NameGenres.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NameGenres_CellClick);
-            this.NameGenres.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NameGenres_CellContentClick);
-            // 
+                        // 
             // Albums
             // 
             this.Albums.AllowUserToAddRows = false;
@@ -114,8 +113,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Albums.Size = new System.Drawing.Size(943, 206);
             this.Albums.TabIndex = 6;
             this.Albums.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Albums_CellClick);
-            this.Albums.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
-            // 
+                  // 
             // StoreGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
