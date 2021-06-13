@@ -36,6 +36,18 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowDialog();
         }
 
+        public void showDetailbytt(string title)
+        {
+            Album a = AlbumDAO.GetAlbumByTitle(title);
+            textBox1.Text = a.Title;
+            textBox2.Text = a.Price.ToString();
+            textBox3.Text = ArtitsDAO.getName(a.ArtistID);
+            textBox4.Text = GenreDAO.getName(a.GenreID);
+            textBox5.Text = a.AlbumID.ToString();
+            pictureBox1.Image = Image.FromFile(a.AlbumUrl);
+            this.ShowDialog();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try

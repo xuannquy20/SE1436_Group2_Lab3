@@ -55,9 +55,9 @@ namespace SE1426_Group2_Lab3.GUI
         {
             if (e.ColumnIndex == albumsData.Columns["Detail"].Index)
             {
-                int albumID = (int)albumsData.Rows[e.RowIndex].Cells["albumID"].Value;
+                string title = albumsData.Rows[e.RowIndex].Cells["Title"].Value.ToString();
                 AlbumDetailGUI ab = new AlbumDetailGUI();
-                ab.showDetail(albumID);
+                ab.showDetailbytt(title);
             }
         }
     }

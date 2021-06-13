@@ -125,6 +125,37 @@ namespace SE1426_Group2_Lab3.DAL
             }
             return album;
         }
+
+        public static Album GetAlbumByTitle(string title)
+        {
+            Album album = null;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Albums WHERE Title = @title");
+                cmd.Parameters.AddWithValue("@title", title);
+                DataTable dt = DAO.GetDataTable(cmd);
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+                    string path = getProjectPath() + row["AlbumUrl"].ToString();
+                    path.Replace('/', '\\');
+                    album = new Album
+                    {
+                        AlbumID = int.Parse(row["AlbumId"].ToString()),
+                        Title = row["Title"].ToString(),
+                        ArtistID = int.Parse(row["ArtistID"].ToString()),
+                        GenreID = int.Parse(row["GenreID"].ToString()),
+                        Price = double.Parse(row["Price"].ToString()),
+                        AlbumUrl = path
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return album;
+        }
     }
 }
 
