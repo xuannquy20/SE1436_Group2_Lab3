@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SE1426_Group2_Lab3.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +15,31 @@ namespace SE1426_Group2_Lab3.GUI
         public AlbumGUI()
         {
             InitializeComponent();
-        }
+            albumsData.DataSource = AlbumDAO.GetDataTable();
+            DataGridViewButtonColumn btnDetail = new DataGridViewButtonColumn
+            {
+                Name = "Detail",
+                Text = "Detail",
+                UseColumnTextForButtonValue = true
+            };
+            albumsData.Columns.Insert(albumsData.ColumnCount, btnDetail);
 
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn
+            {
+                Name = "Edit",
+                Text = "Edit",
+                UseColumnTextForButtonValue = true
+            };
+            albumsData.Columns.Insert(albumsData.ColumnCount, btnEdit);
+
+            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn
+            {
+                Name = "Delete",
+                Text = "Delete",
+                UseColumnTextForButtonValue = true
+            };
+            albumsData.Columns.Insert(albumsData.ColumnCount, btnDelete);
+        }
 
         private void AlbumGUI_Load(object sender, EventArgs e)
         {
@@ -25,6 +49,16 @@ namespace SE1426_Group2_Lab3.GUI
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void albumsData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == albumsData.Columns["Detail"].Index)
+            {
+                int albumID = (int)albumsData.Rows[e.RowIndex].Cells["albumID"].Value;
+                AlbumDetailGUI ab = new AlbumDetailGUI();
+                ab.showDetail(albumID);
+            }
         }
     }
 }

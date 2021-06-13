@@ -26,8 +26,8 @@ namespace SE1426_Group2_Lab3.GUI
                 Text = "Detail",
                 UseColumnTextForButtonValue = true
             };
-
             Albums.Columns.Insert(0, btnDetail);
+
             try
             {
                 SqlCommand cmd = new SqlCommand("Select * from Albums where GenreId = (select GenreId from Genres where Name = @NameGen) ");

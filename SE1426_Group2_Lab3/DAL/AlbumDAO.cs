@@ -23,10 +23,7 @@ namespace SE1426_Group2_Lab3.DAL
                 {
                     var album = new Album
                     {
-                        AlbumID = int.Parse(row["AlbumId"].ToString()),
                         Title = row["Title"].ToString(),
-                        ArtistID = int.Parse(row["ArtistID"].ToString()),
-                        GenreID = int.Parse(row["GenreID"].ToString()),
                         Price = double.Parse(row["Price"].ToString()),
                         AlbumUrl = row["AlbumUrl"].ToString()
 
@@ -44,7 +41,7 @@ namespace SE1426_Group2_Lab3.DAL
         }
         public static DataTable GetDataTable()
         {
-            string sql = "select * from Albums";
+            string sql = "select Title, Price, AlbumUrl from Albums";
             return DAO.GetDataTable(sql);
 
         }

@@ -56,23 +56,17 @@ namespace SE1426_Group2_Lab3
             var id = new ShoppingCartDAO();
             int total = 0;
             SqlCommand cmd = new SqlCommand("select COUNT(*) as total from Carts where CartId = @cartid");
-            if(Variable.Username != null)
+            cmd.Parameters.AddWithValue("@cartid", id.GetCartId());
+            DataTable dt = DAO.GetDataTable(cmd);
+            DataRow row = dt.Rows[0];
+            total = int.Parse(row["total"].ToString());
+            if (total!=0)
             {
-                cmd.Parameters.AddWithValue("@cartid", Variable.Username);
+                cartToolStripMenuItem.Text = "Cart (" + total + ")";
             }
             else
             {
-                cmd.Parameters.AddWithValue("@cartid", id.GetCartId());
-            }
-            DataTable dt = DAO.GetDataTable(cmd);
-            if(dt.Rows.Count > 0)
-            {
-                DataRow row = dt.Rows[0];
-                total = int.Parse(row["total"].ToString());
-            }
-            if (total != 0)
-            {
-                cartToolStripMenuItem.Text = "Cart (" + total + ")";
+                cartToolStripMenuItem.Text = "Cart";
             }
         }
 
