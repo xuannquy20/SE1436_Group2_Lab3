@@ -38,16 +38,15 @@ namespace SE1426_Group2_Lab3.GUI
                 MessageBox.Show("Vui long nhap du thong tin");
             }
             else {
-                double totalmoney = 0;
-                if(promocode.Text == null)
+                double free = 0;
+                if (promocode.Text.Equals("FREE"))
                 {
-                    totalmoney = 0;
+                    OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, free, promocode.Text);
                 }
                 else
                 {
-                    totalmoney = double.Parse(promocode.Text);
+                    OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
                 }
-                OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, totalmoney, promocode.Text);
                 OrderDAO.addOrderDetail();
                 CartDAO.Delete(Variable.Username);
                 this.Close();

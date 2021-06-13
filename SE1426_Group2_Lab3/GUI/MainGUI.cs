@@ -120,6 +120,7 @@ namespace SE1426_Group2_Lab3
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var id = new ShoppingCartDAO();
             if(Variable.Username == null)
             {
                 new LoginGUI().ShowDialog();
@@ -129,6 +130,8 @@ namespace SE1426_Group2_Lab3
                 Variable.Username = null;
                 Variable.Role = -1;
                 getLogin();
+                id.GetCartId();
+                cartToolStripMenuItem.Text = "Cart";
             }
         }
 

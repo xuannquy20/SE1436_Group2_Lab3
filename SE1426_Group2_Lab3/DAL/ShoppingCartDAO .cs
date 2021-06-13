@@ -85,19 +85,27 @@ namespace SE1426_Group2_Lab3.DAL
             cmd.Parameters.AddWithValue("@cartid", GetCartId());
             cmd.Parameters.AddWithValue("@albumid", id);
             DataTable dt = DAO.GetDataTable(cmd);
-            cartItem = new Cart
-            {
-                AlbumID = id,
-                CartID = GetCartId(),
-                Count = 1,
-                DateCreated = DateTime.Now
-            };
             if (dt.Rows.Count == 0)
             {
-                   CartDAO.Insert(cartItem);
+                cartItem = new Cart
+                {
+                    AlbumID = id,
+                    CartID = GetCartId(),
+                    Count = 1,
+                    DateCreated = DateTime.Now
+                };
+                CartDAO.Insert(cartItem);
             }
             else
             {
+                DataRow row = dt.Rows[0];
+                cartItem = new Cart
+                {
+                    AlbumID = int.Parse(row["AlbumId"].ToString()),
+                    CartID = row["CartId"].ToString(),
+                    Count = int.Parse(row["Count"].ToString()),
+                    DateCreated = DateTime.Now
+                };
                 cartItem.Count++;
                 CartDAO.Update(cartItem);
             }
@@ -131,10 +139,17 @@ namespace SE1426_Group2_Lab3.DAL
             if (Variable.Username != null) { 
                 cartID = Variable.Username;
             }
-            else if(cartID ==null)
+            else if(Variable.Username == null)
             {
-                Guid tempCartId = Guid.NewGuid();
-                cartID = tempCartId.ToString();
+                if(cartID == null)
+                {
+                    Guid tempCartId = Guid.NewGuid();
+                    cartID = tempCartId.ToString();
+                }
+                else
+                {
+                    return cartID;
+                }
             }
             return cartID;
         }
