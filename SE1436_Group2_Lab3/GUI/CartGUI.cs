@@ -90,13 +90,13 @@ namespace SE1426_Group2_Lab3.GUI
                     if(Variable.Username != null)
                     {
                         this.Close();
-                        new CheckOutGUI().getCheckout(TotalTextBox.Text);
+                        co.getCheckout(TotalTextBox.Text);
                     }
                 }
                 else
                 {
                     this.Close();
-                    new CheckOutGUI().getCheckout(TotalTextBox.Text);
+                    co.getCheckout(TotalTextBox.Text);
                 }
             }
         }

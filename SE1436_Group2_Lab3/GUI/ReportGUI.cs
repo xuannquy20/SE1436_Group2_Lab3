@@ -18,10 +18,6 @@ namespace SE1426_Group2_Lab3.GUI
             InitializeComponent();
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
@@ -56,15 +52,11 @@ namespace SE1426_Group2_Lab3.GUI
             {
 
                 SqlCommand cmd = new SqlCommand("select * from Orders where OrderDate betWeen @dat and @dat1 AND FirstName LIKE @FirstName AND Country LIKE @Country");
-
                 cmd.Parameters.AddWithValue("@FirstName", "%" + textFname.Text + "%");
                 cmd.Parameters.AddWithValue("@Country", "%" + textCountry.Text + "%");
                 cmd.Parameters.AddWithValue("@dat", dat);
                 cmd.Parameters.AddWithValue("@dat1", dat1);
                 OrderGridView1.DataSource = DAO.GetDataTable(cmd);
-
-
-
             }
             catch (Exception ex)
             {

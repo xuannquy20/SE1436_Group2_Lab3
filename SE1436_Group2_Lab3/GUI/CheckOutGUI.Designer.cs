@@ -359,7 +359,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "CheckOut";
-            this.Activated += new System.EventHandler(this.CheckOutGUI_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 

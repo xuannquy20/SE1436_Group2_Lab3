@@ -26,8 +26,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowDialog();
         }
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             date.Format = DateTimePickerFormat.Custom;
@@ -80,8 +78,5 @@ namespace SE1426_Group2_Lab3.GUI
             }
         }
 
-        private void CheckOutGUI_Activated(object sender, EventArgs e)
-        {
-        }
     }
 }
