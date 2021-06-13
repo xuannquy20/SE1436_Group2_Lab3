@@ -34,30 +34,41 @@ namespace SE1426_Group2_Lab3.GUI
 
         public void bind()
         {
+            var id = new ShoppingCartDAO();
             try
             {
-                SqlCommand cmd = new SqlCommand("select DateCreated, AlbumId, Count from Carts where CartId = @CartID");
-                cmd.Parameters.AddWithValue("@CartID", Variable.Username);
-                CartTable.DataSource = DAO.GetDataTable(cmd);
+                SqlCommand cmd1 = new SqlCommand("select DateCreated, AlbumId, Count from Carts where CartId = @CartID");
+                if (Variable.Username != null) {
+                    cmd1.Parameters.AddWithValue("@CartID", Variable.Username);
+                }
+                else
+                {
+                    cmd1.Parameters.AddWithValue("@CartID", id.GetCartId());
+                }
+                CartTable.DataSource = DAO.GetDataTable(cmd1);
             }
             catch (Exception ex)
             {
             }
-            if (Variable.Username != null) { 
+
             SqlCommand sql = new SqlCommand("select Sum((a.Price * c.count))  as total" +
                         " from Albums a join Carts c" +
                         " on c.AlbumId = a.AlbumId " +
                         "where c.CartId = @CartID");
-            sql.Parameters.AddWithValue("@CartID", Variable.Username);
-            DataTable  dt = DAO.GetDataTable(sql);
+            SqlCommand cmd = new SqlCommand("UPDATE Carts SET CartId = @cartid WHERE CartId != @cartid");
+            cmd.Parameters.AddWithValue("@cartid", id.GetCartId());
+            DAO.UpdateTable(cmd);
+            sql.Parameters.AddWithValue("@CartID", id.GetCartId());
+
+            DataTable dt = DAO.GetDataTable(sql);
             if(dt.Rows.Count > 0)
             {
                 DataRow dtr = dt.Rows[0];
                 string  total = dtr["total"].ToString();
                 TotalTextBox.Text = total;
             }
-            }
         }
+
         public void Remove_Click()
         {
             DataGridViewButtonColumn btnRemove = new DataGridViewButtonColumn
@@ -91,6 +102,7 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void CartGUI_Activated(object sender, EventArgs e)
         {
+            bind();
         }
 
         private void CartTable_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -105,7 +117,6 @@ namespace SE1426_Group2_Lab3.GUI
             if(e.ColumnIndex == CartTable.Columns["Remove"].Index)
             {
                 int albumID = (int)CartTable.Rows[e.RowIndex].Cells["albumID"].Value;
-                string CartID = Variable.Username;
                 s.RemoveFromCart(albumID);
                 bind();
             }

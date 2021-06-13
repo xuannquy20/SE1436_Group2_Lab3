@@ -51,6 +51,31 @@ namespace SE1426_Group2_Lab3
             }
         }
 
+        public void gettotalCart()
+        {
+            var id = new ShoppingCartDAO();
+            int total = 0;
+            SqlCommand cmd = new SqlCommand("select COUNT(*) as total from Carts where CartId = @cartid");
+            if(Variable.Username != null)
+            {
+                cmd.Parameters.AddWithValue("@cartid", Variable.Username);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@cartid", id.GetCartId());
+            }
+            DataTable dt = DAO.GetDataTable(cmd);
+            if(dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                total = int.Parse(row["total"].ToString());
+            }
+            if (total != 0)
+            {
+                cartToolStripMenuItem.Text = "Cart (" + total + ")";
+            }
+        }
+
         private void screen_Paint(object sender, PaintEventArgs e)
         {
             
@@ -79,8 +104,17 @@ namespace SE1426_Group2_Lab3
 
         private void cartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string cmd = "select * from Carts";
-            new CartGUI().CartTable.DataSource = DAO.GetDataTable(cmd);
+            var id = new ShoppingCartDAO();
+            SqlCommand cmd1 = new SqlCommand("select DateCreated, AlbumId, Count from Carts where CartId = @CartID");
+            if (Variable.Username != null)
+            {
+                cmd1.Parameters.AddWithValue("@CartID", Variable.Username);
+            }
+            else
+            {
+                cmd1.Parameters.AddWithValue("@CartID", id.GetCartId());
+            }
+            new CartGUI().CartTable.DataSource = DAO.GetDataTable(cmd1);
             new CartGUI().ShowDialog();
         }
 
@@ -111,6 +145,13 @@ namespace SE1426_Group2_Lab3
         private void MainGUI_Activated(object sender, EventArgs e)
         {
             getLogin();
+            gettotalCart();
+        }
+
+        private void MainGUI_VisibleChanged(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("DELETE FROM Carts");
+            DAO.UpdateTable(cmd);
         }
     }
 }

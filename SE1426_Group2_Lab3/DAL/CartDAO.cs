@@ -66,8 +66,7 @@ namespace SE1426_Group2_Lab3.DAL
             {
                 SqlCommand cmd = new SqlCommand("UPDATE Carts SET CartID = @CartID, " +
                     "albumID = @albumID, count = @count, dateCreated = @dateCreated " +
-                    "WHERE recordID = @recordID");
-                cmd.Parameters.AddWithValue("@recordID", cart.RecordID);
+                    "WHERE albumID = @albumID and CartID = @CartID");
                 cmd.Parameters.AddWithValue("@cartID", cart.CartID);
                 cmd.Parameters.AddWithValue("@albumID", cart.AlbumID);
                 cmd.Parameters.AddWithValue("@count", cart.Count);
@@ -82,11 +81,12 @@ namespace SE1426_Group2_Lab3.DAL
         }
         public static void Delete(string cartID, int albumID)
         {
+            var id = new ShoppingCartDAO();
             try
             {
                 SqlCommand cmd = new SqlCommand("DELETE FROM Carts WHERE cartID = @cartID "
                     + "AND albumID = @albumID");
-                cmd.Parameters.AddWithValue("cartID", cartID);
+                cmd.Parameters.AddWithValue("cartID", id.GetCartId());
                 cmd.Parameters.AddWithValue("albumID", albumID);
                 DAO.UpdateTable(cmd);
             }

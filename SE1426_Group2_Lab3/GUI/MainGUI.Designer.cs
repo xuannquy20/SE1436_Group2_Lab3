@@ -156,6 +156,7 @@ namespace SE1426_Group2_Lab3
             this.Text = "Music store";
             this.Activated += new System.EventHandler(this.MainGUI_Activated);
             this.Load += new System.EventHandler(this.Main_Load);
+            this.VisibleChanged += new System.EventHandler(this.MainGUI_VisibleChanged);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet)).EndInit();

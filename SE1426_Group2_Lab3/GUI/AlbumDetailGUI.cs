@@ -24,8 +24,6 @@ namespace SE1426_Group2_Lab3.GUI
         {
         }
 
-
-
         public void showDetail(int albumID)
         {
             Album a = AlbumDAO.GetAlbumByID(albumID);
@@ -38,24 +36,21 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowDialog();
         }
 
-
-        
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                CartGUI c = new CartGUI();
+                c.check();
                 ShoppingCartDAO s = ShoppingCartDAO.GetCart();
                 s.AddToCart(int.Parse(textBox5.Text));
-                CartGUI c = new CartGUI();
                 c.bind();
-                this.Close();
                 c.ShowDialog();
+                this.Close();
             }
             catch(Exception ex)
             {
             }
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

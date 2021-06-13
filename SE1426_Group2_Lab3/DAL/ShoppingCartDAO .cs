@@ -2,6 +2,8 @@
 using SE1426_Group2_Lab3.GUI;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -12,6 +14,7 @@ namespace SE1426_Group2_Lab3.DAL
         string ShoppingCartId { get; set; }
         static string cartID { get; set; }
         public static string UserName { get; set; }
+
         public static ShoppingCartDAO GetCart()
         {
             var cart = new ShoppingCartDAO();
@@ -22,7 +25,7 @@ namespace SE1426_Group2_Lab3.DAL
         public List<Cart> GetCartItems()
         {
             List<Cart> cartItems = CartDAO.GetCarts()
-                    .Where(c => c.CartID == ShoppingCartId).ToList<Cart>();
+                    .Where(c => c.CartID == GetCartId()).ToList<Cart>();
             return cartItems;
         }
 
@@ -77,23 +80,24 @@ namespace SE1426_Group2_Lab3.DAL
         public void AddToCart(int id)
         {
             // Get the matching cart and album instances
-            var cartItem = CartDAO.GetCarts().Where(c => c.CartID == ShoppingCartId
-                && c.AlbumID == id).FirstOrDefault();
-            if (cartItem == null)
+            Cart cartItem = null;
+            SqlCommand cmd = new SqlCommand("select * from carts where cartId = @cartid and albumid = @albumid");
+            cmd.Parameters.AddWithValue("@cartid", GetCartId());
+            cmd.Parameters.AddWithValue("@albumid", id);
+            DataTable dt = DAO.GetDataTable(cmd);
+            cartItem = new Cart
             {
-                // Create a new cart item if no cart item exists
-                cartItem = new Cart
-                {
-                    AlbumID = id,
-                    CartID = ShoppingCartId,
-                    Count = 1,
-                    DateCreated = DateTime.Now
-                };
-                CartDAO.Insert(cartItem);
+                AlbumID = id,
+                CartID = GetCartId(),
+                Count = 1,
+                DateCreated = DateTime.Now
+            };
+            if (dt.Rows.Count == 0)
+            {
+                   CartDAO.Insert(cartItem);
             }
             else
             {
-                // If the item does exist in the cart, then add one to the quantity
                 cartItem.Count++;
                 CartDAO.Update(cartItem);
             }
@@ -124,15 +128,13 @@ namespace SE1426_Group2_Lab3.DAL
 
         public string GetCartId()
         {
-            if (cartID == null)
+            if (Variable.Username != null) { 
+                cartID = Variable.Username;
+            }
+            else if(cartID ==null)
             {
-                if (ShoppingCartId != null)
-                    cartID = ShoppingCartId;
-                else
-                {
-                    Guid tempCartId = Guid.NewGuid();
-                    cartID = tempCartId.ToString();
-                }
+                Guid tempCartId = Guid.NewGuid();
+                cartID = tempCartId.ToString();
             }
             return cartID;
         }
