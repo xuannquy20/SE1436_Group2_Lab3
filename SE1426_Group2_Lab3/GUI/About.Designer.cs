@@ -66,9 +66,9 @@ namespace SE1426_Group2_Lab3.GUI
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(228, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Group1:";
+            this.label3.Text = "Group 2:";
             // 
             // label4
             // 
@@ -86,9 +86,9 @@ namespace SE1426_Group2_Lab3.GUI
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(285, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 20);
+            this.label5.Size = new System.Drawing.Size(220, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "2.";
+            this.label5.Text = "2. HE141304 Do Gia Bao";
             // 
             // label6
             // 
@@ -96,9 +96,9 @@ namespace SE1426_Group2_Lab3.GUI
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(285, 228);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 20);
+            this.label6.Size = new System.Drawing.Size(244, 20);
             this.label6.TabIndex = 5;
-            this.label6.Text = "3.";
+            this.label6.Text = "3. HE141309 Mai Tien Dung";
             // 
             // label7
             // 
