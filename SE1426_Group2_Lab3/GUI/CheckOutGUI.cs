@@ -37,12 +37,25 @@ namespace SE1426_Group2_Lab3.GUI
             {
                 MessageBox.Show("Vui long nhap du thong tin");
             }
-            else { 
-                OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
+            else {
+                double totalmoney = 0;
+                if(promocode.Text == null)
+                {
+                    totalmoney = 0;
+                }
+                else
+                {
+                    totalmoney = double.Parse(promocode.Text);
+                }
+                OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, totalmoney, promocode.Text);
                 OrderDAO.addOrderDetail();
                 CartDAO.Delete(Variable.Username);
                 this.Close();
             }
+        }
+
+        private void CheckOutGUI_Activated(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -109,7 +109,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Address:";
-
             // 
             // label6
             // 
@@ -120,7 +119,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.label6.Size = new System.Drawing.Size(43, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "City:";
-
             // 
             // label7
             // 
@@ -141,7 +139,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.label8.Size = new System.Drawing.Size(72, 20);
             this.label8.TabIndex = 8;
             this.label8.Text = "Country:";
-
             // 
             // label9
             // 
@@ -282,14 +279,12 @@ namespace SE1426_Group2_Lab3.GUI
             this.label13.Size = new System.Drawing.Size(99, 20);
             this.label13.TabIndex = 23;
             this.label13.Text = "Promocode:";
-
             // 
             // promocode
             // 
             this.promocode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.promocode.Location = new System.Drawing.Point(258, 603);
             this.promocode.Name = "promocode";
-            this.promocode.ReadOnly = true;
             this.promocode.Size = new System.Drawing.Size(281, 26);
             this.promocode.TabIndex = 24;
             // 
@@ -313,7 +308,6 @@ namespace SE1426_Group2_Lab3.GUI
             this.button2.TabIndex = 26;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-
             // 
             // date
             // 
@@ -365,6 +359,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "CheckOut";
+            this.Activated += new System.EventHandler(this.CheckOutGUI_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
