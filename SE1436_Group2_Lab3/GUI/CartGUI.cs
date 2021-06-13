@@ -90,9 +90,17 @@ namespace SE1426_Group2_Lab3.GUI
                 CheckOutGUI co = new CheckOutGUI();
                 if (Variable.Username == null) {
                     new LoginGUI().ShowDialog();
+                    if(Variable.Username != null)
+                    {
+                        this.Close();
+                        new CheckOutGUI().getCheckout(TotalTextBox.Text);
+                    }
                 }
-                this.Close();
-                new CheckOutGUI().getCheckout(TotalTextBox.Text);
+                else
+                {
+                    this.Close();
+                    new CheckOutGUI().getCheckout(TotalTextBox.Text);
+                }
             }
         }
         
