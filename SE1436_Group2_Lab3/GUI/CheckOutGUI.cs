@@ -66,10 +66,9 @@ namespace SE1426_Group2_Lab3.GUI
                 MessageBox.Show("Email required!");
             }
             else {
-                double free = 0;
-                if (promocode.Text.Equals("FREE"))
+                if (promocode.Text == "FREE")
                 {
-                    OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, free, promocode.Text);
+                    OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, 0, promocode.Text);
                 }
                 else
                 {

@@ -49,6 +49,10 @@ namespace SE1426_Group2_Lab3
                 albumsToolStripMenuItem.Visible = false;
                 loginToolStripMenuItem.Text = "Login";
             }
+            var id = new ShoppingCartDAO();
+            SqlCommand cmd = new SqlCommand("UPDATE Carts SET CartId = @cartid WHERE CartId != @cartid");
+            cmd.Parameters.AddWithValue("@cartid", id.GetCartId());
+            DAO.UpdateTable(cmd);
         }
 
         public void gettotalCart()

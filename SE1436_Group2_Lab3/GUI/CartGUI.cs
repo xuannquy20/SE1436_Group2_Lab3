@@ -55,9 +55,6 @@ namespace SE1426_Group2_Lab3.GUI
                         " from Albums a join Carts c" +
                         " on c.AlbumId = a.AlbumId " +
                         "where c.CartId = @CartID");
-            SqlCommand cmd = new SqlCommand("UPDATE Carts SET CartId = @cartid WHERE CartId != @cartid");
-            cmd.Parameters.AddWithValue("@cartid", id.GetCartId());
-            DAO.UpdateTable(cmd);
             sql.Parameters.AddWithValue("@CartID", id.GetCartId());
 
             DataTable dt = DAO.GetDataTable(sql);
