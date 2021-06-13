@@ -41,7 +41,6 @@ namespace SE1426_Group2_Lab3.GUI
             try
             {
                 CartGUI c = new CartGUI();
-                c.check();
                 ShoppingCartDAO s = ShoppingCartDAO.GetCart();
                 s.AddToCart(int.Parse(textBox5.Text));
                 c.bind();
