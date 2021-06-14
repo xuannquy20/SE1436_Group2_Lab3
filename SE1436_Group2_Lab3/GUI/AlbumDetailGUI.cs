@@ -26,26 +26,42 @@ namespace SE1426_Group2_Lab3.GUI
 
         public void showDetail(int albumID)
         {
-            Album a = AlbumDAO.GetAlbumByID(albumID);
-            textBox1.Text = a.Title;
-            textBox2.Text = a.Price.ToString();
-            textBox3.Text = ArtitsDAO.getName(a.ArtistID);
-            textBox4.Text = GenreDAO.getName(a.GenreID);
-            textBox5.Text = a.AlbumID.ToString();
-            pictureBox1.Image = Image.FromFile(a.AlbumUrl);
+
+            try {
+                Album a = AlbumDAO.GetAlbumByID(albumID);
+                textBox1.Text = a.Title;
+                textBox2.Text = a.Price.ToString();
+                textBox3.Text = ArtitsDAO.getName(a.ArtistID);
+                textBox4.Text = GenreDAO.getName(a.GenreID);
+                textBox5.Text = a.AlbumID.ToString();
+                pictureBox1.Image = Image.FromFile(a.AlbumUrl);
+            }
+            catch(Exception e)
+            {
+
+            }
             this.ShowDialog();
         }
 
         public void showDetailbytt(string title)
         {
-            Album a = AlbumDAO.GetAlbumByTitle(title);
-            textBox1.Text = a.Title;
-            textBox2.Text = a.Price.ToString();
-            textBox3.Text = ArtitsDAO.getName(a.ArtistID);
-            textBox4.Text = GenreDAO.getName(a.GenreID);
-            textBox5.Text = a.AlbumID.ToString();
-            pictureBox1.Image = Image.FromFile(a.AlbumUrl);
-            this.ShowDialog();
+            
+            try {
+                Album a = AlbumDAO.GetAlbumByTitle(title);
+                textBox1.Text = a.Title;
+                textBox2.Text = a.Price.ToString();
+                textBox3.Text = ArtitsDAO.getName(a.ArtistID);
+                textBox4.Text = GenreDAO.getName(a.GenreID);
+                textBox5.Text = a.AlbumID.ToString();
+                
+                pictureBox1.Image = Image.FromFile(a.AlbumUrl);
+            }
+            catch(Exception e)
+            {
+            }
+            finally { 
+                this.ShowDialog();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

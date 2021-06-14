@@ -75,6 +75,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.OrderDetailGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrderDetailGridView2.Location = new System.Drawing.Point(335, 300);
             this.OrderDetailGridView2.Name = "OrderDetailGridView2";
+            this.OrderDetailGridView2.ReadOnly = true;
             this.OrderDetailGridView2.RowHeadersWidth = 51;
             this.OrderDetailGridView2.RowTemplate.Height = 24;
             this.OrderDetailGridView2.Size = new System.Drawing.Size(446, 150);

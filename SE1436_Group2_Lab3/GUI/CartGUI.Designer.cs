@@ -74,6 +74,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.CartTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CartTable.Location = new System.Drawing.Point(26, 116);
             this.CartTable.Name = "CartTable";
+            this.CartTable.ReadOnly = true;
             this.CartTable.RowHeadersWidth = 51;
             this.CartTable.RowTemplate.Height = 24;
             this.CartTable.Size = new System.Drawing.Size(700, 193);

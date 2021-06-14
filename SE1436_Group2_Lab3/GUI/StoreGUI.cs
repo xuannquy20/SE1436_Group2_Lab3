@@ -43,10 +43,6 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void Store_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'musicStoreDataSet2.Albums' table. You can move, or remove it, as needed.
-            this.albumsTableAdapter.Fill(this.musicStoreDataSet2.Albums);
-            // TODO: This line of code loads data into the 'musicStoreDataSet1.Genres' table. You can move, or remove it, as needed.
-            this.genresTableAdapter.Fill(this.musicStoreDataSet1.Genres);
 
         }
 

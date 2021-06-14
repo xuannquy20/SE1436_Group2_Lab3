@@ -32,36 +32,22 @@ namespace SE1426_Group2_Lab3.GUI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StoreGUI));
             this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.musicStoreDataSet1 = new SE1426_Group2_Lab3.MusicStoreDataSet1();
-            this.genresTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet1TableAdapters.GenresTableAdapter();
+       //     this.genresTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet1TableAdapters.GenresTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.musicStoreDataSet2 = new SE1426_Group2_Lab3.MusicStoreDataSet2();
             this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet2TableAdapters.AlbumsTableAdapter();
+       //     this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet2TableAdapters.AlbumsTableAdapter();
             this.NameGenres = new System.Windows.Forms.DataGridView();
             this.Albums = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameGenres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Albums)).BeginInit();
             this.SuspendLayout();
             // 
-            // genresBindingSource
-            // 
-            this.genresBindingSource.DataMember = "Genres";
-            this.genresBindingSource.DataSource = this.musicStoreDataSet1;
-            // 
-            // musicStoreDataSet1
-            // 
-            this.musicStoreDataSet1.DataSetName = "MusicStoreDataSet1";
-            this.musicStoreDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // genresTableAdapter
             // 
-            this.genresTableAdapter.ClearBeforeFill = true;
+        //    this.genresTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
@@ -73,19 +59,9 @@ namespace SE1426_Group2_Lab3.GUI
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // musicStoreDataSet2
-            // 
-            this.musicStoreDataSet2.DataSetName = "MusicStoreDataSet2";
-            this.musicStoreDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // albumsBindingSource
-            // 
-            this.albumsBindingSource.DataMember = "Albums";
-            this.albumsBindingSource.DataSource = this.musicStoreDataSet2;
-            // 
             // albumsTableAdapter
             // 
-            this.albumsTableAdapter.ClearBeforeFill = true;
+         //   this.albumsTableAdapter.ClearBeforeFill = true;
             // 
             // NameGenres
             // 
@@ -100,7 +76,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.NameGenres.Size = new System.Drawing.Size(242, 235);
             this.NameGenres.TabIndex = 5;
             this.NameGenres.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NameGenres_CellClick);
-                        // 
+            // 
             // Albums
             // 
             this.Albums.AllowUserToAddRows = false;
@@ -108,12 +84,13 @@ namespace SE1426_Group2_Lab3.GUI
             this.Albums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Albums.Location = new System.Drawing.Point(13, 254);
             this.Albums.Name = "Albums";
+            this.Albums.ReadOnly = true;
             this.Albums.RowHeadersWidth = 51;
             this.Albums.RowTemplate.Height = 24;
             this.Albums.Size = new System.Drawing.Size(943, 206);
             this.Albums.TabIndex = 6;
             this.Albums.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Albums_CellClick);
-                  // 
+            // 
             // StoreGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -130,9 +107,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.Text = "Store";
             this.Load += new System.EventHandler(this.Store_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicStoreDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameGenres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Albums)).EndInit();
@@ -141,13 +116,11 @@ namespace SE1426_Group2_Lab3.GUI
         }
 
         #endregion
-        private MusicStoreDataSet1 musicStoreDataSet1;
         private System.Windows.Forms.BindingSource genresBindingSource;
-        private MusicStoreDataSet1TableAdapters.GenresTableAdapter genresTableAdapter;
+      //  private MusicStoreDataSet1TableAdapters.GenresTableAdapter genresTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MusicStoreDataSet2 musicStoreDataSet2;
         private System.Windows.Forms.BindingSource albumsBindingSource;
-        private MusicStoreDataSet2TableAdapters.AlbumsTableAdapter albumsTableAdapter;
+     //   private MusicStoreDataSet2TableAdapters.AlbumsTableAdapter albumsTableAdapter;
         private System.Windows.Forms.DataGridView NameGenres;
         private System.Windows.Forms.DataGridView Albums;
     }

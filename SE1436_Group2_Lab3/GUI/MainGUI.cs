@@ -86,8 +86,7 @@ namespace SE1426_Group2_Lab3
         
         private void Main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'musicStoreDataSet.Albums' table. You can move, or remove it, as needed.
-            this.albumsTableAdapter.Fill(this.musicStoreDataSet.Albums);
+
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
