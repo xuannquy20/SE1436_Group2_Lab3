@@ -56,7 +56,6 @@ namespace SE1426_Group2_Lab3.GUI
                         " on c.AlbumId = a.AlbumId " +
                         "where c.CartId = @CartID");
             sql.Parameters.AddWithValue("@CartID", id.GetCartId());
-
             DataTable dt = DAO.GetDataTable(sql);
             if(dt.Rows.Count > 0)
             {
@@ -89,15 +88,14 @@ namespace SE1426_Group2_Lab3.GUI
                     new LoginGUI().ShowDialog();
                     if(Variable.Username != null)
                     {
-                        this.Close();
-                        co.getCheckout(TotalTextBox.Text);
+                        co.getCheckout();
                     }
                 }
                 else
                 {
-                    this.Close();
-                    co.getCheckout(TotalTextBox.Text);
+                    co.getCheckout();
                 }
+                this.Close();
             }
         }
         

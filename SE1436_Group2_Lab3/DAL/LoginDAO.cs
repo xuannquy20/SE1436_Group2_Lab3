@@ -23,7 +23,11 @@ namespace SE1426_Group2_Lab3.DAL
                 DataRow row = dt.Rows[0];
                 Variable.Username = row["UserName"].ToString();
                 Variable.Role = int.Parse(row["Role"].ToString());
-            }
+                var id = new ShoppingCartDAO();
+                SqlCommand cmd1 = new SqlCommand("UPDATE Carts SET CartId = @cartid WHERE CartId != @cartid");
+                cmd1.Parameters.AddWithValue("@cartid", id.GetCartId());
+                DAO.UpdateTable(cmd1);
+                }
             }
             catch(Exception e)
             {

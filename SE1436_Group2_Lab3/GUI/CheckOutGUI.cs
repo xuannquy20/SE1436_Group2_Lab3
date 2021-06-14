@@ -1,8 +1,10 @@
-﻿using SE1426_Group2_Lab3.DAL;
+﻿using Lab3_Template.DTL;
+using SE1426_Group2_Lab3.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,15 +17,52 @@ namespace SE1426_Group2_Lab3.GUI
         public CheckOutGUI()
         {
             InitializeComponent();
-            DateTime date = DateTime.Now;
-            this.date.Value = date;
         }
 
-        public void getCheckout(string total)
+        public void getCheckout()
         {
             username.Text = Variable.Username;
-            this.total.Text = total.ToString();
-            this.ShowDialog();
+            try
+            {
+                DateTime date = DateTime.Now;
+                this.date.Value = date;
+                var id = new ShoppingCartDAO();
+                SqlCommand sql = new SqlCommand("select Sum((a.Price * c.count))  as total" +
+                            " from Albums a join Carts c" +
+                            " on c.AlbumId = a.AlbumId " +
+                            "where c.CartId = @CartID");
+                sql.Parameters.AddWithValue("@CartID", id.GetCartId());
+                DataTable dt = DAO.GetDataTable(sql);
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow dtr = dt.Rows[0];
+                    string total = dtr["total"].ToString();
+                    this.total.Text = total;
+                }
+                User u = null;
+                SqlCommand cmd = new SqlCommand("select * from Users where UserName = @username");
+                cmd.Parameters.AddWithValue("@username", Variable.Username);
+                DataTable dt1 = DAO.GetDataTable(cmd);
+                if (dt1.Rows.Count > 0)
+                {
+                    DataRow dr = dt1.Rows[0];
+                    username.Text = dr["username"].ToString();
+                    firstname.Text = dr["Firstname"].ToString();
+                    lastname.Text = dr["Lastname"].ToString();
+                    address.Text = dr["address"].ToString();
+                    city.Text = dr["city"].ToString();
+                    state.Text = dr["state"].ToString();
+                    country.Text = dr["country"].ToString();
+                    phone.Text = dr["phone"].ToString();
+                    email.Text = dr["email"].ToString();
+                }
+                promocode.Text = "FREE";
+            }
+            catch (Exception e) { 
+            }
+            finally { 
+                this.ShowDialog();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,15 +102,9 @@ namespace SE1426_Group2_Lab3.GUI
             {
                 MessageBox.Show("Email required!");
             }
-            else {
-                if (promocode.Text == "FREE")
-                {
-                    OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, 0, promocode.Text);
-                }
-                else
-                {
-                    OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
-                }
+            else 
+            {
+                OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
                 OrderDAO.addOrderDetail();
                 CartDAO.Delete(Variable.Username);
                 this.Close();

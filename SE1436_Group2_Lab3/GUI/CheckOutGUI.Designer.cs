@@ -285,6 +285,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.promocode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.promocode.Location = new System.Drawing.Point(258, 603);
             this.promocode.Name = "promocode";
+            this.promocode.ReadOnly = true;
             this.promocode.Size = new System.Drawing.Size(281, 26);
             this.promocode.TabIndex = 24;
             // 
