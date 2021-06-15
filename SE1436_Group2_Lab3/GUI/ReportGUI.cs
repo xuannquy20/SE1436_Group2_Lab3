@@ -16,6 +16,9 @@ namespace SE1426_Group2_Lab3.GUI
         public ReportGUI()
         {
             InitializeComponent();
+
+            string cmd = "select * from Orders";
+            OrderGridView1.DataSource = DAO.GetDataTable(cmd);
         }
 
 

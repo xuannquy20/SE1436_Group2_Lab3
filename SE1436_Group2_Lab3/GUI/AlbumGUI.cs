@@ -48,7 +48,7 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            new AlbumAddGUI().ShowDialog();
         }
 
         private void albumsData_CellClick(object sender, DataGridViewCellEventArgs e)
