@@ -27,8 +27,17 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
+            int year = monthCalendar1.SelectionStart.Year;
+            int month = monthCalendar1.SelectionStart.Month;
+            int day = monthCalendar1.SelectionStart.Day;
 
+            textFrom.Text = string.Format("{0}/{1}/{2}", day, month, year);
 
+            int year1 = monthCalendar1.SelectionEnd.Year;
+            int month1 = monthCalendar1.SelectionEnd.Month;
+            int day1 = monthCalendar1.SelectionEnd.Day;
+
+            textTo.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,7 +90,6 @@ namespace SE1426_Group2_Lab3.GUI
                 DateTime  dt = (DateTime)OrderGridView1.Rows[e.RowIndex].Cells["OrderDate"].Value;
                 textFname.Text = OrderGridView1.Rows[e.RowIndex].Cells["FirstName"].Value.ToString();
                 textCountry.Text = OrderGridView1.Rows[e.RowIndex].Cells["Country"].Value.ToString();
-               // monthCalendar1.SetSelectionRange(dt, dt);
 
                
                 SqlCommand cmd = new SqlCommand("select * from OrderDetails Where OrderId = @Orid");
@@ -97,19 +105,5 @@ namespace SE1426_Group2_Lab3.GUI
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            int year = monthCalendar1.SelectionStart.Year;
-            int month = monthCalendar1.SelectionStart.Month;
-            int day = monthCalendar1.SelectionStart.Day;
-
-            textFrom.Text = string.Format("{0}/{1}/{2}", day, month, year);
-
-            int year1 = monthCalendar1.SelectionEnd.Year;
-            int month1 = monthCalendar1.SelectionEnd.Month;
-            int day1 = monthCalendar1.SelectionEnd.Day;
-
-            textTo.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
-        }
     }
 }
