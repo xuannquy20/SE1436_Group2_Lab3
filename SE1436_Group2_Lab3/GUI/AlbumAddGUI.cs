@@ -49,6 +49,7 @@ namespace SE1426_Group2_Lab3.GUI
                 Album a = AlbumDAO.GetAlbumByID(albumID);
                 textBox1.Text = a.Title;
                 textBox2.Text = a.Price.ToString();
+
                 string cmd1 = "select GenreId,name  from Genres";
                 DataTable dt = DAO.GetDataTable(cmd1);
                 BindingSource source = new BindingSource();
@@ -94,7 +95,7 @@ namespace SE1426_Group2_Lab3.GUI
                     GenreID = int.Parse(comboBox1.SelectedValue.ToString()),
                     Title = textBox1.Text.ToString(),
                     Price = double.Parse(textBox2.Text.ToString()),
-                    AlbumUrl = textBox3.Text.ToString(),
+                    AlbumUrl = textBox3.Text.Replace('\\', '/').ToString(),
                     AlbumID = int.Parse(textBox4.Text)
                 };
                     if (IsSave)
