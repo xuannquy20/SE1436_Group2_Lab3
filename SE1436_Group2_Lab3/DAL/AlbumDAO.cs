@@ -41,7 +41,7 @@ namespace SE1426_Group2_Lab3.DAL
         }
         public static DataTable GetDataTable()
         {
-            string sql = "select Title, Price, AlbumUrl from Albums";
+            string sql = "select * from Albums";
             return DAO.GetDataTable(sql);
 
         }
@@ -75,12 +75,11 @@ namespace SE1426_Group2_Lab3.DAL
 
         }
 
-        public static bool Delete(Album album)
+        public static bool Delete(int id)
         {
             SqlCommand cmd = new SqlCommand("Delete from Albums where AlbumID=@AlbumID");
-            cmd.Parameters.AddWithValue("@AlbumID", album.AlbumID);
+            cmd.Parameters.AddWithValue("@AlbumID", id);
             return DAO.UpdateTable(cmd);
-
         }
 
 

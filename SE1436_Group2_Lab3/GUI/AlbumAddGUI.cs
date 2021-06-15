@@ -14,6 +14,10 @@ namespace SE1426_Group2_Lab3.GUI
 {
     public partial class AlbumAddGUI : Form
     {
+        bool isSave = true;
+
+        public bool IsSave { get => isSave; set => isSave = value; }
+
         public AlbumAddGUI()
         {
             InitializeComponent();
@@ -36,6 +40,44 @@ namespace SE1426_Group2_Lab3.GUI
             comboBox2.ValueMember = "ArtistId";
         }
 
+        public void showDetail(int albumID)
+        {
+            try
+            {
+                Album a = AlbumDAO.GetAlbumByID(albumID);
+                textBox1.Text = a.Title;
+                textBox2.Text = a.Price.ToString();
+                string cmd1 = "select GenreId,name  from Genres";
+                DataTable dt = DAO.GetDataTable(cmd1);
+                BindingSource source = new BindingSource();
+                source.DataSource = dt;
+                comboBox1.DataSource = source;
+                comboBox1.DisplayMember = "name";
+                comboBox1.ValueMember = "GenreId";
+
+                string cmd = "select ArtistId,name  from Artists";
+                DataTable dt1 = DAO.GetDataTable(cmd);
+                BindingSource source2 = new BindingSource();
+                source2.DataSource = dt1;
+                comboBox2.DataSource = source2;
+                comboBox2.DisplayMember = "name";
+                comboBox2.ValueMember = "ArtistId";
+
+                textBox3.Text = a.AlbumUrl;
+                textBox4.Text = a.AlbumID.ToString();
+
+                pictureBox1.Image = Image.FromFile(a.AlbumUrl);
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                this.ShowDialog();
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -50,12 +92,19 @@ namespace SE1426_Group2_Lab3.GUI
                     GenreID = int.Parse(comboBox1.SelectedValue.ToString()),
                     Title = textBox1.Text.ToString(),
                     Price = double.Parse(textBox2.Text.ToString()),
-                    AlbumUrl = textBox3.Text.ToString()
+                    AlbumUrl = textBox3.Text.ToString(),
+                    AlbumID = int.Parse(textBox4.Text)
                 };
-                AlbumDAO.Insert(a);
+                if (IsSave) {
+                    AlbumDAO.Insert(a);
+                }
+                else if (!isSave)
+                {
+                    AlbumDAO.Update(a);
+                }
                 this.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Price must be double number");
             }
