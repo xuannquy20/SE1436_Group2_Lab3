@@ -27,17 +27,7 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            int year = monthCalendar1.SelectionStart.Year;
-            int month = monthCalendar1.SelectionStart.Month;
-            int day = monthCalendar1.SelectionStart.Day;
 
-            textFrom.Text = string.Format("{0}/{1}/{2}", day, month, year);
-
-            int year1 = monthCalendar1.SelectionEnd.Year;
-            int month1 = monthCalendar1.SelectionEnd.Month;
-            int day1 = monthCalendar1.SelectionEnd.Day;
-
-            textTo.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
 
         }
 
@@ -84,17 +74,42 @@ namespace SE1426_Group2_Lab3.GUI
 
         private void Order_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string od = OrderGridView1.Rows[e.RowIndex].Cells["OrderId"].Value.ToString();
+            
             try
             {
-                SqlCommand cmd = new SqlCommand("Select * from OrderDetails where OrderId = (select OrderId from Orders where OrderId = @dateOr) ");
-                cmd.Parameters.AddWithValue("@dateOr", od);
-                OrderDetailGridView2.DataSource = DAO.GetDataTable(cmd);
+
+                DateTime  dt = (DateTime)OrderGridView1.Rows[e.RowIndex].Cells["OrderDate"].Value;
+                textFname.Text = OrderGridView1.Rows[e.RowIndex].Cells["FirstName"].Value.ToString();
+                textCountry.Text = OrderGridView1.Rows[e.RowIndex].Cells["Country"].Value.ToString();
+               // monthCalendar1.SetSelectionRange(dt, dt);
+
+               
+                SqlCommand cmd = new SqlCommand("select * from OrderDetails Where OrderId = @Orid");
+                cmd.Parameters.AddWithValue("@Orid", int.Parse(OrderGridView1.Rows[e.RowIndex].Cells["OrderId"].Value.ToString()));
+
+                DataTable daT = DAO.GetDataTable(cmd);
+                OrderDetailGridView2.DataSource = daT;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            int year = monthCalendar1.SelectionStart.Year;
+            int month = monthCalendar1.SelectionStart.Month;
+            int day = monthCalendar1.SelectionStart.Day;
+
+            textFrom.Text = string.Format("{0}/{1}/{2}", day, month, year);
+
+            int year1 = monthCalendar1.SelectionEnd.Year;
+            int month1 = monthCalendar1.SelectionEnd.Month;
+            int day1 = monthCalendar1.SelectionEnd.Day;
+
+            textTo.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
         }
     }
 }
