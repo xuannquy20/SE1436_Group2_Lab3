@@ -125,7 +125,6 @@ namespace SE1426_Group2_Lab3
                 getLogin();
                 gettotalCart();
                 id.GetCartId();
-                cartToolStripMenuItem.Text = "Cart";
             }
         }
 
