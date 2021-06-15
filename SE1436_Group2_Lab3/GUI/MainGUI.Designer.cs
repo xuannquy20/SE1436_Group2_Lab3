@@ -41,7 +41,6 @@ namespace SE1426_Group2_Lab3
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.screen = new System.Windows.Forms.Panel();
             this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-          //  this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSetTableAdapters.AlbumsTableAdapter();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -122,20 +121,16 @@ namespace SE1426_Group2_Lab3
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 58);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(968, 472);
+            this.screen.Size = new System.Drawing.Size(968, 484);
             this.screen.TabIndex = 2;
             this.screen.Paint += new System.Windows.Forms.PaintEventHandler(this.screen_Paint);
-            // 
-            // albumsTableAdapter
-            // 
-      //      this.albumsTableAdapter.ClearBeforeFill = true;
             // 
             // MainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(968, 530);
+            this.ClientSize = new System.Drawing.Size(968, 542);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.Menu);
             this.MainMenuStrip = this.Menu;

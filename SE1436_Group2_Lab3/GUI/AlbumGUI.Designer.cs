@@ -50,10 +50,10 @@ namespace SE1426_Group2_Lab3.GUI
             this.albumsData.AllowUserToAddRows = false;
             this.albumsData.AllowUserToDeleteRows = false;
             this.albumsData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.albumsData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.albumsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.albumsData.Location = new System.Drawing.Point(12, 61);
             this.albumsData.Name = "albumsData";
+            this.albumsData.ReadOnly = true;
             this.albumsData.RowHeadersWidth = 51;
             this.albumsData.RowTemplate.Height = 24;
             this.albumsData.Size = new System.Drawing.Size(944, 386);

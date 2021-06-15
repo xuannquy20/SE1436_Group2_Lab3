@@ -22,6 +22,8 @@ namespace SE1426_Group2_Lab3.GUI
         {
             InitializeComponent();
             textBox4.Hide();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
 
             string cmd1 = "select GenreId,name  from Genres";
             DataTable dt = DAO.GetDataTable(cmd1);
@@ -95,18 +97,19 @@ namespace SE1426_Group2_Lab3.GUI
                     AlbumUrl = textBox3.Text.ToString(),
                     AlbumID = int.Parse(textBox4.Text)
                 };
-                if (IsSave) {
-                    AlbumDAO.Insert(a);
-                }
-                else if (!isSave)
-                {
-                    AlbumDAO.Update(a);
-                }
-                this.Close();
+                    if (IsSave)
+                    {
+                        AlbumDAO.Insert(a);
+                    }
+                    else if (!isSave)
+                    {
+                        AlbumDAO.Update(a);
+                    }
+                    this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Price must be double number");
+                MessageBox.Show("Title cannot be empty and Price must be double number");
             }
         }
 

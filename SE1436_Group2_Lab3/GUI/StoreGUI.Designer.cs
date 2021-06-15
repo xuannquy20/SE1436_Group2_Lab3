@@ -32,10 +32,8 @@ namespace SE1426_Group2_Lab3.GUI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StoreGUI));
             this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-       //     this.genresTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet1TableAdapters.GenresTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-       //     this.albumsTableAdapter = new SE1426_Group2_Lab3.MusicStoreDataSet2TableAdapters.AlbumsTableAdapter();
             this.NameGenres = new System.Windows.Forms.DataGridView();
             this.Albums = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
@@ -44,10 +42,6 @@ namespace SE1426_Group2_Lab3.GUI
             ((System.ComponentModel.ISupportInitialize)(this.NameGenres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Albums)).BeginInit();
             this.SuspendLayout();
-            // 
-            // genresTableAdapter
-            // 
-        //    this.genresTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
@@ -59,14 +53,11 @@ namespace SE1426_Group2_Lab3.GUI
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // albumsTableAdapter
-            // 
-         //   this.albumsTableAdapter.ClearBeforeFill = true;
-            // 
             // NameGenres
             // 
             this.NameGenres.AllowUserToAddRows = false;
             this.NameGenres.AllowUserToDeleteRows = false;
+            this.NameGenres.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.NameGenres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.NameGenres.Location = new System.Drawing.Point(12, 12);
             this.NameGenres.Name = "NameGenres";
@@ -81,6 +72,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.Albums.AllowUserToAddRows = false;
             this.Albums.AllowUserToDeleteRows = false;
+            this.Albums.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Albums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Albums.Location = new System.Drawing.Point(13, 254);
             this.Albums.Name = "Albums";

@@ -19,6 +19,9 @@ namespace SE1426_Group2_Lab3.GUI
 
             string cmd = "select * from Orders";
             OrderGridView1.DataSource = DAO.GetDataTable(cmd);
+
+            string cmd1 = "Select * from OrderDetails where OrderId = (select Top 1OrderId from Orders)";
+            OrderDetailGridView2.DataSource = DAO.GetDataTable(cmd1);
         }
 
 

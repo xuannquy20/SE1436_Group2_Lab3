@@ -62,6 +62,7 @@ namespace SE1426_Group2_Lab3.GUI
             this.OrderGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrderGridView1.Location = new System.Drawing.Point(335, 29);
             this.OrderGridView1.Name = "OrderGridView1";
+            this.OrderGridView1.ReadOnly = true;
             this.OrderGridView1.RowHeadersWidth = 51;
             this.OrderGridView1.RowTemplate.Height = 24;
             this.OrderGridView1.Size = new System.Drawing.Size(564, 235);
@@ -72,6 +73,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.OrderDetailGridView2.AllowUserToAddRows = false;
             this.OrderDetailGridView2.AllowUserToDeleteRows = false;
+            this.OrderDetailGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OrderDetailGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrderDetailGridView2.Location = new System.Drawing.Point(335, 300);
             this.OrderDetailGridView2.Name = "OrderDetailGridView2";

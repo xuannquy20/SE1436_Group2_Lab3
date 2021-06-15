@@ -71,6 +71,7 @@ namespace SE1426_Group2_Lab3.GUI
             // 
             this.CartTable.AllowUserToAddRows = false;
             this.CartTable.AllowUserToDeleteRows = false;
+            this.CartTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CartTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CartTable.Location = new System.Drawing.Point(26, 116);
             this.CartTable.Name = "CartTable";
