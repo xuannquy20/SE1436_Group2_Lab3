@@ -154,6 +154,11 @@ namespace SE1426_Group2_Lab3.DAL
             return cartID;
         }
 
+        public string CartID()
+        {
+            return cartID;
+        }
+
         // When a user has logged in, migrate their shopping cart 
         // to be associated with their username
         public void MigrateCart()

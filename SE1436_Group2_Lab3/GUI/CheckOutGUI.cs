@@ -107,6 +107,10 @@ namespace SE1426_Group2_Lab3.GUI
                 OrderDAO.addOrder(dat, firstname.Text, lastname.Text, address.Text, city.Text, state.Text, country.Text, phone.Text, email.Text, double.Parse(total.Text), promocode.Text);
                 OrderDAO.addOrderDetail();
                 CartDAO.Delete(Variable.Username);
+                string sql = "select MAX(orderid) as id from Orders";
+                DataTable dt = DAO.GetDataTable(sql);
+                DataRow dr = dt.Rows[0];
+                MessageBox.Show("Order successfully\nOrderID: " + dr["id"].ToString());
                 this.Close();
             }
         }

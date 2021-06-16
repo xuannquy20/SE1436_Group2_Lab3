@@ -123,8 +123,9 @@ namespace SE1426_Group2_Lab3
                 Variable.Username = null;
                 Variable.Role = -1;
                 getLogin();
-                gettotalCart();
+                id.ResetCartID();
                 id.GetCartId();
+                gettotalCart();
             }
         }
 
