@@ -30,11 +30,11 @@ namespace SE1426_Group2_Lab3.GUI
             try {
                 Album a = AlbumDAO.GetAlbumByID(albumID);
                 textBox1.Text = a.Title;
-               textBox2.Text = a.Price.ToString();
+                textBox2.Text = a.Price.ToString();
                 textBox3.Text = ArtitsDAO.getName(a.ArtistID);
                 textBox4.Text = GenreDAO.getName(a.GenreID);
-                textBox5.Text = a.AlbumID.ToString();
-                pictureBox1.Image = Image.FromFile(a.AlbumUrl);
+                textBox5.Text = a.AlbumID.ToString().Replace("\\","/");
+                pictureBox1.Image = Image.FromFile(AlbumDAO.getProjectPath() + a.AlbumUrl);
             }
             catch(Exception e)
            {

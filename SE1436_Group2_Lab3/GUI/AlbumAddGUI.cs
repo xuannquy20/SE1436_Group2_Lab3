@@ -99,13 +99,12 @@ namespace SE1426_Group2_Lab3.GUI
             };
                     if (IsSave)
                     {
-                        
                         AlbumDAO.Insert(a);
                     }
                     else if (!isSave)
                     {
-                    a.AlbumID = int.Parse(textBox4.Text);
-                    AlbumDAO.Update(a);
+                        a.AlbumID = int.Parse(textBox4.Text);
+                        AlbumDAO.Update(a);
                     }
                     this.Close();
             }
@@ -122,7 +121,7 @@ namespace SE1426_Group2_Lab3.GUI
             textBox3.Text = ("/Images/" + of.SafeFileName).Replace("\\", "/");
             try
             {
-                pictureBox1.Image = Image.FromFile(textBox3.Text);
+                pictureBox1.Image = Image.FromFile(of.FileName);
             }
             catch(Exception ex)
             {

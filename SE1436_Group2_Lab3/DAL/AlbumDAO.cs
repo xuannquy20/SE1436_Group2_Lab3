@@ -83,7 +83,7 @@ namespace SE1426_Group2_Lab3.DAL
         }
 
 
-        private static string getProjectPath()
+        public static string getProjectPath()
         {
             string path = Application.StartupPath;
             DirectoryInfo di = new DirectoryInfo(path);
@@ -105,8 +105,6 @@ namespace SE1426_Group2_Lab3.DAL
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
-                    string path = getProjectPath() + row["AlbumUrl"].ToString();
-                    path.Replace('/', '\\');
                     album = new Album
                     {
                         AlbumID = int.Parse(row["AlbumId"].ToString()),
@@ -114,8 +112,8 @@ namespace SE1426_Group2_Lab3.DAL
                         ArtistID = int.Parse(row["ArtistID"].ToString()),
                         GenreID = int.Parse(row["GenreID"].ToString()),
                         Price = double.Parse(row["Price"].ToString()),
-                        AlbumUrl = path
-                    };
+                        AlbumUrl = row["AlbumUrl"].ToString().Replace('/', '\\')
+                };
                 }
             }
             catch (Exception ex)
