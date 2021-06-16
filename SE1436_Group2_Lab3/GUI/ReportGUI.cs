@@ -38,6 +38,8 @@ namespace SE1426_Group2_Lab3.GUI
             int day1 = monthCalendar1.SelectionEnd.Day;
 
             textTo.Text = string.Format("{0}/{1}/{2}", day1, month1, year1);
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,7 +54,11 @@ namespace SE1426_Group2_Lab3.GUI
             int month1 = monthCalendar1.SelectionEnd.Month;
             int day1 = monthCalendar1.SelectionEnd.Day;
 
+         
             string dat1 = string.Format("{0}-{1}-{2}", year1, month1, day1);
+
+            OrderDetailGridView2.DataSource = null;
+
             try
             {
 
@@ -86,11 +92,19 @@ namespace SE1426_Group2_Lab3.GUI
             
             try
             {
-
+               
                 DateTime  dt = (DateTime)OrderGridView1.Rows[e.RowIndex].Cells["OrderDate"].Value;
+
+                int year = dt.Year;
+                int month = dt.Month;
+                int day = dt.Day;
+
+                textFrom.Text = string.Format("{0}-{1}-{2}", day, month, year );
+                textTo.Text = string.Format("{0}-{1}-{2}", day, month, year );
+
                 textFname.Text = OrderGridView1.Rows[e.RowIndex].Cells["FirstName"].Value.ToString();
                 textCountry.Text = OrderGridView1.Rows[e.RowIndex].Cells["Country"].Value.ToString();
-
+                
                
                 SqlCommand cmd = new SqlCommand("select * from OrderDetails Where OrderId = @Orid");
                 cmd.Parameters.AddWithValue("@Orid", int.Parse(OrderGridView1.Rows[e.RowIndex].Cells["OrderId"].Value.ToString()));
