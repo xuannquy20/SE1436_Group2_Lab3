@@ -39,6 +39,7 @@ namespace SE1426_Group2_Lab3.DAL
                     count += cartItem.Count;
             return count;
         }
+
         public double GetTotal()
         {
             // Multiply album price by count of that album to get
