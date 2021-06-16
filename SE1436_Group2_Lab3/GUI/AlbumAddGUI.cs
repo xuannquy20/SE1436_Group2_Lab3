@@ -96,15 +96,16 @@ namespace SE1426_Group2_Lab3.GUI
                     Title = textBox1.Text.ToString(),
                     Price = double.Parse(textBox2.Text.ToString()),
                     AlbumUrl = textBox3.Text.Replace('\\', '/').ToString(),
-                    AlbumID = int.Parse(textBox4.Text)
-                };
+            };
                     if (IsSave)
                     {
+                        
                         AlbumDAO.Insert(a);
                     }
                     else if (!isSave)
                     {
-                        AlbumDAO.Update(a);
+                    a.AlbumID = int.Parse(textBox4.Text);
+                    AlbumDAO.Update(a);
                     }
                     this.Close();
             }
