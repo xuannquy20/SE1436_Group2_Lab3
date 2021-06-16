@@ -119,7 +119,7 @@ namespace SE1426_Group2_Lab3.GUI
         {
             OpenFileDialog of = new OpenFileDialog();
             of.ShowDialog();
-            textBox3.Text = of.FileName;
+            textBox3.Text = ("/Images/" + of.SafeFileName).Replace("\\", "/");
             try
             {
                 pictureBox1.Image = Image.FromFile(textBox3.Text);
