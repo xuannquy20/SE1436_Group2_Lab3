@@ -117,15 +117,19 @@ namespace SE1426_Group2_Lab3.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog of = new OpenFileDialog();
-            of.ShowDialog();
-            textBox3.Text = ("/Images/" + of.SafeFileName).Replace("\\", "/");
-            try
+            of.InitialDirectory = AlbumDAO.getProjectPath() + "/Images";
+            of.Multiselect = false;
+            if(of.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(of.FileName);
-            }
-            catch(Exception ex)
-            {
+                textBox3.Text = ("/Images/" + of.SafeFileName).Replace("\\", "/");
+                try
+                {
+                    pictureBox1.Image = Image.FromFile(of.FileName);
+                }
+                catch (Exception ex)
+                {
 
+                }
             }
         }
 
