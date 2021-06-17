@@ -60,6 +60,7 @@ namespace SE1426_Group2_Lab3.GUI
             AlbumAddGUI aa = new AlbumAddGUI();
             aa.IsSave = true;
             aa.ShowDialog();
+            bind();
         }
 
         private void albumsData_CellClick(object sender, DataGridViewCellEventArgs e)

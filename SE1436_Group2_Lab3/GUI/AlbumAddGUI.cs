@@ -66,8 +66,8 @@ namespace SE1426_Group2_Lab3.GUI
                 comboBox2.DisplayMember = "name";
                 comboBox2.ValueMember = "ArtistId";
 
-                textBox3.Text = a.AlbumUrl;
-                textBox4.Text = a.AlbumID.ToString().Replace("\\","/");
+                textBox3.Text = a.AlbumUrl.Replace("\\", "/");
+                textBox4.Text = a.AlbumID.ToString();
 
                 pictureBox1.Image = Image.FromFile(a.AlbumUrl);
             }
@@ -105,7 +105,7 @@ namespace SE1426_Group2_Lab3.GUI
                     {
                         a.AlbumID = int.Parse(textBox4.Text);
                         AlbumDAO.Update(a);
-                    }
+                }
                     this.Close();
             }
             catch (Exception ex)
@@ -117,7 +117,6 @@ namespace SE1426_Group2_Lab3.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog of = new OpenFileDialog();
-            of.InitialDirectory = AlbumDAO.getProjectPath() + "/Images";
             of.Multiselect = false;
             if(of.ShowDialog() == DialogResult.OK)
             {
