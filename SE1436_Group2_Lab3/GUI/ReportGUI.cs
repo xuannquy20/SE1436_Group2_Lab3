@@ -98,7 +98,8 @@ namespace SE1426_Group2_Lab3.GUI
                 int year = dt.Year;
                 int month = dt.Month;
                 int day = dt.Day;
-
+                monthCalendar1.SelectionStart = dt;
+                monthCalendar1.SelectionEnd = dt;
                 textFrom.Text = string.Format("{0}-{1}-{2}", day, month, year );
                 textTo.Text = string.Format("{0}-{1}-{2}", day, month, year );
 
