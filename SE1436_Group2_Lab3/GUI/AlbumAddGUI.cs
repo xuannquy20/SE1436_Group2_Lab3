@@ -67,7 +67,7 @@ namespace SE1426_Group2_Lab3.GUI
                 comboBox2.ValueMember = "ArtistId";
 
                 textBox3.Text = a.AlbumUrl;
-                textBox4.Text = a.AlbumID.ToString();
+                textBox4.Text = a.AlbumID.ToString().Replace("\\","/");
 
                 pictureBox1.Image = Image.FromFile(a.AlbumUrl);
             }
